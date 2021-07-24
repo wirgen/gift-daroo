@@ -1981,12 +1981,12 @@
                               map.setView([center.lat, center.lng], 19)
                               L.control.attribution({
                                 prefix: ''
-                              }).addAttribution(' < a href = "http://maps.sputnik.ru/" > Спутник < /a> &copy; OpenStreetMap').addTo(map)
+                              }).addAttribution('<a href="http://maps.sputnik.ru/">Спутник</a> &copy; OpenStreetMap').addTo(map)
                               L.control.zoom({
                                 position: 'bottomleft'
                               }).addTo(map)
                               var domainOrigin = window.location.origin
-                              L.tileLayer(domainOrigin + '/tiles/{z}/{x}/{y}.png', {
+                              L.tileLayer('https://daroo.by/tiles/{z}/{x}/{y}.png', {
                                 maxZoom: 19,
                                 minZoom: 1
                               }).addTo(map)
