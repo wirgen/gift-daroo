@@ -1,0 +1,2893 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head itemscope itemtype="http://schema.org/WebSite">
+    <meta charset="utf-8">
+    <link href="/assets/css/desktop/full.css?v=1.3.7.5" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&subset=latin,cyrillic"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&subset=latin,cyrillic" rel="stylesheet"
+          type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,300" rel="stylesheet">
+    <script src="/assets/js/desktop/full.js?v=1.3.3.1" type="text/javascript"></script>
+    <script src="/js/ladda/dist/spin.min.js" type="text/javascript"></script>
+    <script src="/js/ladda/dist/ladda.min.js" type="text/javascript"></script>
+    <script src="https://cdn.carrotquest.io/api.min.js" type="text/javascript"></script>
+    <script src="/js/routing.js?callback=fos.Router.setData"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async src="//static.criteo.net/js/ld/ld.js?v=1.0" type="text/javascript"></script>
+    <script src="//apis.google.com/js/client.js"></script>
+    <title itemprop='name'>Обзорные полеты на самолете от авиаклуба Crazy Fly — купить сертификат в Минске для себя или
+        в подарок </title>
+    <meta content="Обзорные полеты на самолете от авиаклуба Crazy Fly по доступной цене в Минске. Купить сертификаты для себя и в подарок на сайте сервиса DAROO"
+          name="description">
+    <meta content="website" property="og:type" />
+    <meta content="Обзорные полеты на самолете от авиаклуба Crazy Fly — купить сертификат в Минске для себя или в подарок"
+          property="og:title" />
+    <meta content="Обзорные полеты на самолете от авиаклуба Crazy Fly по доступной цене в Минске. Купить сертификаты для себя и в подарок на сайте сервиса DAROO"
+          property="og:description" />
+    <meta content="https://daroo.by/minsk/polet-na-samolete" property="og:url" />
+    <meta content="daroo.by" property="og:site_name" />
+    <meta content="http://images.daroo.gift/daroo.by/gallery/productbanner/5003233/2020/09/01/5f4e08f0ed6c5.jpg"
+          property="og:image" />
+    <meta content="ru_RU" property="og:locale" />
+    <meta content="полет, полет на самолете, экстрим, романтическое приключение" name="keywords">
+    <meta content="telephone=no" name="format-detection">
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+<link class="meta-link" content="https://daroo.by/minsk/polet-na-samolete"
+      href="https://daroo.by/minsk/polet-na-samolete"
+      itemprop="url" />
+<span data-is-mobile="0" data-zone="by" id="zone-span" style="display: none;"></span>
+<div class="preloader-bg">
+    <div id="preloader"></div>
+</div>
+<div class="wrap">
+    <!--efhn57er-->
+    <header class="header">
+        <div class="cont">
+            <div class="contInner">
+                <a class="logo" href="https://daroo.by/"></a>
+                <script type="text/javascript">
+                  $(document).ready(function () {
+                    $('span.cur-region').on('click', function (e) {
+                      e.preventDefault()
+                      if ($('div.region-list').hasClass('active')) {
+                        $('div.region-list').removeClass('active')
+                      } else {
+                        $('div.region-list').addClass('active')
+                      }
+                      if ($('.search-header').hasClass('active')) {
+                        $('.search-header').removeClass('active')
+                        $('header.header').animate({
+                          top: '-=70'
+                        }, 300)
+                        $('section.main-col').animate({
+                          top: '-=70'
+                        }, 300)
+                        $('footer.footer').animate({
+                          top: '-=70'
+                        }, 300)
+                        $('.search-header').find('div.searchCont').hide()
+                        $('div.searchContInner').hide()
+                      }
+                      if ($('.auth-header').hasClass('active')) {
+                        $('.authCont').stop().animate({
+                          height: '0px'
+                        }, 300)
+                        window.setTimeout(function () {
+                          $('.auth.auth-header').removeClass('active')
+                        }, 300)
+                      }
+                      if ($('.menuLink').hasClass('active')) {
+                        $('.menuCont').css('height', $('.menuCont').actual('height') + 'px')
+                        $('.menuCont').stop().animate({
+                          height: 0
+                        }, 300)
+                        window.setTimeout(function () {
+                          $('.menu .menuLink').removeClass('active')
+                          $('.menu .menuCont').removeClass('active')
+                        }, 300)
+                      }
+                    })
+                    $('#submit-current-region').on('click', function (e) {
+                      e.preventDefault()
+                    })
+                    $('#choose-another-region').on('click', function (e) {
+                      e.preventDefault()
+                      $('div.choose-region-popup').hide()
+                      $('span.cur-region').trigger('click')
+                      return false
+                    })
+                    $('div.region-list .col span').on('click', function (e) {
+                      e.preventDefault()
+                      var $_self = $(this)
+                      if ($_self.hasClass('active')) {
+                        return false
+                      }
+                      var regionCode = $_self.attr('data-region-code')
+                      var url = 'https://daroo.by/minsk/region/removeRegionPopup'
+                      var domain = $_self.parents('div.col').attr('data-domain')
+                      var curDomain = $('div.region-list .col.col-1').attr('data-domain')
+                      var curRegion = $('span.cur-region').attr('data-region')
+                      var newUrl = url
+                      if (domain !== curDomain) {
+                        url = url.replace(curDomain, domain)
+                      }
+                      if (url.indexOf(curRegion) !== -1) {
+                        url = url.replace(curRegion, regionCode)
+                      }
+                      Url.post(newUrl, {}, function (response) {
+                        if (response.status === 'ok') {
+                          $('div.region-list').removeClass('active')
+                          window.location.replace(url)
+                        }
+                      })
+                      return false
+                    })
+                    $('div.choose-region-popup a#submit-current-region').on('click', function (e) {
+                      e.preventDefault()
+                      var $_self = $(this)
+                      var url = 'https://daroo.by/minsk/region/removeRegionPopup'
+                      Url.post(url, {}, function (response) {
+                        $_self.parents('div.choose-region-popup').hide()
+                        $_self.parents('div.choose-region-popup').removeClass('active')
+                        $('.need-region-popup').each(function () {
+                          $(this).removeClass('need-region-popup')
+                        })
+                      })
+                    })
+                  })
+                </script>
+                <div class="region-select">
+              <span class="cur-region" data-region="minsk">
+                <span class="ico"></span>
+                <span class="r-name"> Минск </span>
+              </span>
+                    <div class="region-list">
+                        <span class="h1-region"> Выбор региона </span>
+                        <div class="triangle"></div>
+                        <div class="col col-1" data-domain="https://daroo.by" style="width: 49%;">
+                            <span class="h2-region by"> Беларусь </span>
+                            <span class="span" data-region-code="brest"> Брест </span>
+                            <span class="span" data-region-code="vitebsk"> Витебск </span>
+                            <span class="span" data-region-code="gomel"> Гомель </span>
+                            <span class="span" data-region-code="grodno"> Гродно </span>
+                            <span class="span" data-region-code="mogilev"> Могилев </span>
+                            <span class="span active"> Минск </span>
+                            <span class="span" data-region-code="polotsk"> Полоцк и Новополоцк </span>
+                        </div>
+                        <div class="col col-2" data-domain="https://daroo.ru" style="width: 49%;">
+                            <span class="h2-region ru"> Россия </span>
+                            <span class="span" data-region-code="msk"> Москва </span>
+                            <span class="span" data-region-code="spb"> Санкт-Петербург </span>
+                            <span class="span" data-region-code="ekb"> Екатеринбург </span>
+                            <span class="span" data-region-code="nsk"> Новосибирск </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="headRight">
+                    <div class="add-company-header">
+                        <a class="brief_button header_brief" href="https://forms.amocrm.ru/vclcmx" target="_blank">
+                            <div>Стать партнером</div>
+                        </a>
+                    </div>
+                    <script type="text/javascript">
+                      $(document).ready(function () {
+                        $('a#about-club, a.last-about-club').on('click', function (e) {
+                          e.preventDefault()
+                          e.stopPropagation()
+                          var $url = $(this).attr('href')
+                          window.location.href = $url
+                        })
+                        $('div.auth-popup').on('click', function (e) {
+                          e.preventDefault()
+                          e.stopPropagation()
+                        })
+                        $('div.auth.auth-header.need-auth').on('click', function (e) {
+                          e.preventDefault()
+                          var $url = $(this).attr('data-url')
+                          if ($url) window.location.href = $url
+                        })
+                        $('.auth.auth-header').click(function () {
+                          //$(".menuCont").stop().animate({marginLeft:0}, 300)
+                          if ($('.region-list').hasClass('active')) {
+                            $('span.cur-region').trigger('click')
+                          }
+                          if ($('.help-header').hasClass('active')) {
+                            $('.basketCont, .phoneCont').stop().slideUp(150)
+                            $('.help-header').removeClass('active')
+                          }
+                          if ($(this).hasClass('active')) {
+                            $('.authCont').stop().animate({
+                              height: '0px'
+                            }, 300)
+                            window.setTimeout(function () {
+                              $('.auth.auth-header').removeClass('active')
+                            }, 300)
+                          } else {
+                            $(this).addClass('active')
+                            $('.authCont').css('height', '0px')
+                            $('.authCont').stop().animate({
+                              height: '363px'
+                            }, 300)
+                          }
+                          if ($('.menuLink').hasClass('active')) {
+                            $('.menuCont').css('height', $('.menuCont').actual('height') + 'px')
+                            $('.menuCont').stop().animate({
+                              height: 0
+                            }, 300)
+                            window.setTimeout(function () {
+                              $('.menu .menuLink').removeClass('active')
+                              $('.menu .menuCont').removeClass('active')
+                            }, 300)
+                          }
+                          if ($('div.basket').hasClass('active')) {
+                            $('.basket').toggleClass('active')
+                            $('.basketCont').stop().slideToggle(150)
+                          }
+                          if ($('.search-header').hasClass('active')) {
+                            $('.search-header').removeClass('active')
+                            $('header.header').animate({
+                              top: '-=70'
+                            }, 300)
+                            $('section.main-col').animate({
+                              top: '-=70'
+                            }, 300)
+                            $('footer.footer').animate({
+                              top: '-=70'
+                            }, 300)
+                            $('.search-header').find('div.searchCont').hide()
+                            $('div.searchContInner').hide()
+                          }
+                          return false
+                        })
+                        $('div.auth-popup a.close').on('click', function (e) {
+                          e.preventDefault()
+                          $('div.auth-popup').hide()
+                        })
+                      })
+                    </script>
+                    <div class="auth auth-header need-auth" data-url="https://daroo.by/user/auth">
+                        <div class="authInfo">
+                            <span> Авторизация | Регистрация </span>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                      $(function () {
+                        $('#header_search_form .searchBtn').on('click', function (e) {
+                          form = $(this).parent('#header_search_form')
+                          textInput = form.children('.searchText')
+                          if (textInput && textInput.val()) form.submit()
+                          return false
+                        })
+                        $(document).on('click', function (e) {
+                          var el = $('.searchnew.search-header')
+                          if (!el.is(e.target)) {
+                            $('div.searchCont').slideUp(150)
+                            $('div.searchCont').off()
+                            el.removeClass('active')
+                          }
+                        })
+                        $('.searchnew.search-header').click(function (e) {
+                          if ($('.help-header').hasClass('active')) {
+                            $('.help-header').removeClass('active')
+                            $('.phoneCont').stop().slideUp(150)
+                          }
+                          if ($('.region-list').hasClass('active')) {
+                            $('span.cur-region').trigger('click')
+                          }
+                          if ($('.auth-header').hasClass('active')) {
+                            $('.authCont').stop().animate({
+                              height: '0px'
+                            }, 300)
+                            window.setTimeout(function () {
+                              $('.auth.auth-header').removeClass('active')
+                            }, 300)
+                          }
+                          if ($('div.basket').hasClass('active')) {
+                            $('.basket').toggleClass('active')
+                            $('.basketCont').slideUp(150)
+                          }
+                          var $cont = $(this).find('div.searchCont')
+                          if ($(this).hasClass('active')) {
+                            $cont.off()
+                            $(this).removeClass('active')
+                            $cont.stop().slideUp(150)
+                          } else {
+                            $(this).addClass('active')
+                            $cont.on('click', function (e) {
+                              e.preventDefault()
+                              e.stopPropagation()
+                            })
+                            $cont.stop().slideDown(150)
+                            $('input[name=word].searchText').focus()
+                          }
+                          if ($(this).hasClass('active')) {
+                            if ($('.choose-region-popup').hasClass('active')) {
+                              $('.choose-region-popup').hide()
+                              $(this).addClass('need-region-popup')
+                              $('.choose-region-popup').removeClass('active')
+                            }
+                          } else {
+                            if ($(this).hasClass('need-region-popup')) {
+                              $('.choose-region-popup').show()
+                              $(this).removeClass('need-region-popup')
+                              $('.choose-region-popup').addClass('active')
+                            }
+                          }
+                        })
+                        $('ul.auth-user-menu li, ul.auth-user-menu li a').on('click', function (e) {
+                          e.preventDefault()
+                          if ($('.phoneInfo').parent().hasClass('active')) {
+                            $('.phoneInfo').trigger('click')
+                          }
+                          var $_self = $(this)
+                          var $isLiElem = $_self.parent().hasClass('auth-user-menu')
+                          if ($isLiElem && $_self.hasClass('active')) {
+                            return false
+                          }
+                          if (!$isLiElem && $_self.parent().hasClass('active')) {
+                            return false
+                          }
+                          var $href
+                          if ($isLiElem) {
+                            $href = $_self.find('a').attr('href')
+                          } else {
+                            $href = $_self.attr('href')
+                          }
+                          if ($href !== '' && $href !== '#') {
+                            window.location.href = $href
+                          }
+                        })
+                      })
+                    </script>
+                    <div class="searchnew search-header">
+                        <div class="searchInfo"></div>
+                        <div class="searchCont">
+                            <div class="searchContInner" itemscope itemtype="http://schema.org/WebSite" style="">
+                                <link class="meta-link" content="https://daroo.by/" href="https://daroo.by/"
+                                      itemprop="url" />
+                                <form action="https://daroo.by/minsk/search" id="header_search_form"
+                                      itemprop="potentialAction"
+                                      itemscope itemtype="http://schema.org/SearchAction" method="GET">
+                                    <link class="meta-link" content="https://daroo.by/minsk/search?word={word}"
+                                          href="https://daroo.by/minsk/search?word={word}"
+                                          itemprop="target" />
+                                    <input class="searchText" itemprop="query-input" name="word" placeholder="Что ищем?"
+                                           type="text">
+                                    <input class="searchBtn" type="submit" value="Искать">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="help help-header">
+                        <div class="phoneInfo"></div>
+                        <div class="phoneCont bs-left bs-bottom bs-right">
+                            <div style="font-size: 16px; text-align: center; padding-bottom: 30px;padding-top: 30px">
+                                <a href="mailto:support@daroo.by">
+                                    <strong>support@daroo.by</strong>
+                                </a>
+                            </div>
+                            <a class="where" href="https://daroo.by/minsk/contacts">Где купить?</a>
+                        </div>
+                    </div>
+                    <style type="text/css">
+                      div.search {
+                        margin-right: 30px;
+                      }
+
+                      div.helpdesk {
+                        float: left;
+                        position: relative;
+                        top: 28px;
+                      }
+
+                      a#help-open {
+                        padding: 0px 27px;
+                        margin: 15px 23px;
+                        width: 160px;
+                        height: 45px;
+                        line-height: 45px;
+                      }
+
+                      /*
+                      div.help-widget {
+                      display: none;
+                      position: relative;
+                      }
+                      div.help-widget div#ue-embedded-widget {
+                      position: absolute;
+                      width: 400px;
+                      top: 150px;
+                      left: 35%;
+                      }
+                      */
+                      div.help-widget {
+                        display: none;
+                        position: absolute;
+                        height: 100vh;
+                        width: 100vw;
+                        left: 0;
+                        top: 0;
+                        z-index: 10000 !important;
+                        overflow: auto;
+                      }
+
+                      div.help-widget div#ue-embedded-widget {
+                        position: absolute;
+                        width: 400px;
+                        top: calc(50% + 100px);
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                      }
+
+                      div#ue-embedded-widget iframe {
+                        margin-left: -50px;
+                        background-color: white !important;
+                        border-radius: 8px;
+                        width: 510px !important;
+                        /*height: 600px !important;*/
+                      }
+                    </style>
+                    <script type='text/javascript'>
+                      var _ues = {
+                        host: 'support.daroo.by',
+                        forum: '3',
+                        lang: 'ru',
+                        tab_show: false,
+                        container_id: 'ue-embedded-widget'
+                      }
+                      $(document).ready(function () {
+                        $('a#help-open').on('click', function (e) {
+                          e.preventDefault()
+                          if ($('div.help-widget #ue-embedded-widget iframe').length == 0) {
+                            (function () {
+                              var _ue = document.createElement('script')
+                              _ue.type = 'text/javascript'
+                              _ue.async = true
+                              //                _ue.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.userecho.com/js/widget-1.4.gz.js';
+                              _ue.src = '/userecho/widget-1.4.gz.js'
+                              var s = document.getElementsByTagName('script')[0]
+                              s.parentNode.insertBefore(_ue, s)
+                            })()
+                          }
+                          var $widget = $('div.help-widget')
+                          if (!$widget.hasClass('active')) {
+                            $('.phoneCont').stop().slideToggle(150)
+                            $('.phoneCont').parent('.help.help-header').toggleClass('active')
+                            $widget.addClass('active')
+                            $widget.show()
+                          } else {
+                            $widget.removeClass('active')
+                            $widget.hide()
+                          }
+                        })
+                      })
+                      var messageListener = function (e) {
+                        if (e.origin !== 'https://support.daroo.by' && e.origin !== 'http://support.daroo.by' && e.origin !== 'http://daroo.local' && e.origin !== 'https://daroo.by') {
+                          return
+                        }
+                        //            console.log(e.data, e.origin);
+                        if (e.data == 'ue_widget_hide' || (typeof e.data === typeof [] && e.data[0] == 'ue_widget_hide')) {
+                          var $widget = $('div.help-widget')
+                          $widget.removeClass('active')
+                          $widget.hide()
+                        }
+                        if (typeof e.data === typeof [] && e.data[0] === 'ue_widget_change_height') {
+                          var $widget = $('div.help-widget')
+                          $widget.find('iframe').style('height', e.data[1] + 'px', 'important')
+                        }
+                      }
+                      if (window.addEventListener) {
+                        window.addEventListener('message', messageListener, false)
+                      } else if (window.attachEvent) {
+                        window.attachEvent('onmessage', messageListener)
+                      }
+                      (function ($) {
+                        if ($.fn.style) {
+                          return
+                        }
+                        // Escape regex chars with \
+                        var escape = function (text) {
+                          return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
+                        }
+                        // For those who need them (< IE 9), add support for CSS functions
+                        var isStyleFuncSupported = !!CSSStyleDeclaration.prototype.getPropertyValue
+                        if (!isStyleFuncSupported) {
+                          CSSStyleDeclaration.prototype.getPropertyValue = function (a) {
+                            return this.getAttribute(a)
+                          }
+                          CSSStyleDeclaration.prototype.setProperty = function (styleName, value, priority) {
+                            this.setAttribute(styleName, value)
+                            var priority = typeof priority != 'undefined' ? priority : ''
+                            console.log(priority)
+                            if (priority != '') {
+                              // Add priority manually
+                              var rule = new RegExp(escape(styleName) + '\\s*:\\s*' + escape(value) + '(\\s*;)?', 'gmi')
+                              this.cssText = this.cssText.replace(rule, styleName + ': ' + value + ' !' + priority + ';')
+                            }
+                          }
+                          CSSStyleDeclaration.prototype.removeProperty = function (a) {
+                            return this.removeAttribute(a)
+                          }
+                          CSSStyleDeclaration.prototype.getPropertyPriority = function (styleName) {
+                            var rule = new RegExp(escape(styleName) + '\\s*:\\s*[^\\s]*\\s*!important(\\s*;)?', 'gmi')
+                            return rule.test(this.cssText) ? 'important' : ''
+                          }
+                        }
+                        // The style function
+                        $.fn.style = function (styleName, value, priority) {
+                          // DOM node
+                          var node = this.get(0)
+                          // Ensure we have a DOM node
+                          if (typeof node == 'undefined') {
+                            return this
+                          }
+                          // CSSStyleDeclaration
+                          var style = this.get(0).style
+                          // Getter/Setter
+                          if (typeof styleName != 'undefined') {
+                            if (typeof value != 'undefined') {
+                              // Set style property
+                              priority = typeof priority != 'undefined' ? priority : ''
+                              style.setProperty(styleName, value, priority)
+                              return this
+                            } else {
+                              // Get style property
+                              return style.getPropertyValue(styleName)
+                            }
+                          } else {
+                            // Get CSSStyleDeclaration
+                            return style
+                          }
+                        }
+                      })(jQuery)
+                    </script>
+                    <script type="text/javascript">
+                      $(document).ready(function () {
+                        if ($('div.basketContDisplay span.empty-text').length > 0 && $('div.basketContDisplay ul li').length < 1) {
+                          $('div.basketCont').css('width', '300px')
+                        }
+                      })
+                    </script>
+                    <style type="text/css">
+                      .nicescroll-cursors {
+                        background-color: rgb(148, 68, 116);
+                      }
+
+                      .price span.item_count {
+                        color: #919191;
+                        font-size: 15px;
+                        font-weight: initial;
+                      }
+
+                      div.basketCont span.empty-text {
+                        padding: 0px 18px;
+                        position: relative;
+                        top: 10px;
+                        font-size: 15px;
+                      }
+                    </style>
+                    <div class="basket">
+                        <a class="basketLink" href="#">
+                            <span id="cart-totalItems"></span>
+                        </a>
+                        <div class="basketContDisplay">
+                            <div class="basketCont">
+                                <ul class="basketContUl">
+                                    <span class="empty-text"> Ваша корзина пуста, сделайте выбор </span>
+                                </ul>
+                                <div class="basketOrder" style="height: 67px;display:none;">
+                                    <div class="total"> итого: <strong>
+                                        <span id="cart-inline-total"> 0.00 руб. </span>
+                                    </strong>
+                                    </div>
+                                    <a class="btn self-cart-btn" href="https://daroo.by/minsk/cart/save/pack-type/self"
+                                       style="width: 180px;">Оформить для себя</a>
+                                    <a class="btn gift-cart-btn" href="https://daroo.by/minsk/cart/save/pack-type/gift"
+                                       style="width: 180px;">Оформить в подарок</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                      var totalItems = parseInt('0')
+                      if (!totalItems) totalItems = 0
+                      var totalsUrl = '/minsk/cart/get/totals'
+                      initScroller()
+                      $('a.self-cart-btn, a.gift-cart-btn').on('click', function (e) {
+                        e.preventDefault()
+                        return false
+                      })
+                      $('.basketCont ul').on('click', 'li .cart-inline-remove', function (e) {
+                        e.preventDefault()
+                        return false
+                      })
+
+                      function getNewPrice (price) {
+                        var $floor, $fraction, $isTens
+                        price = '' + price + ''
+                        price = price.replace(',', '.')
+                        price = price.replace(' ', '')
+                        price = parseFloat(price)
+                        $floor = Math.floor(price)
+                        $fraction = price - $floor
+                        $isTens = ($fraction * 10) > 1
+                        $fraction = Math.floor(Math.round($fraction * 100))
+                        if ($isTens) {
+                          $fraction = pad($fraction, 2, '0', 'right')
+                        } else {
+                          $fraction = pad($fraction, 2, '0', 'left')
+                        }
+                        return {
+                          floor: $floor,
+                          fraction: $fraction
+                        }
+                      }
+
+                      function convertPrice (priceVal) {
+                        priceVal = '' + priceVal + ''
+                        priceVal = priceVal.replace(',', '.')
+                        priceVal = priceVal.replace(' ', '')
+                        priceVal = parseFloat(priceVal)
+                        return priceVal * 10000
+                      }
+
+                      function pad ($val, $maxLen, $pad, $direction) {
+                        var $padded = '' + $val + ''
+                        if ($direction === 'left') {
+                          while ($padded.length < $maxLen) {
+                            $padded = $pad + $padded
+                          }
+                        } else {
+                          while ($padded.length < $maxLen) {
+                            $padded = $padded + $pad
+                          }
+                        }
+                        return $padded
+                      }
+
+                      function initScroller () {
+                        $('.basketCont').css('max-height', '380px')
+                        $('.basketContUl').css('max-height', '200px')
+                        $('.basketContUl').addClass('no-overflow')
+                        $('.basketContUl').niceScroll({
+                          cursorcolor: 'rgb(148, 68, 116);',
+                          autohidemode: false,
+                          railoffset: {
+                            left: 0
+                          },
+                          cursorfixedheight: 70
+                        })
+                      }
+                    </script>
+                </div>
+                <div class="help-widget">
+                    <div id="ue-embedded-widget"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- NEW MENU START -->
+    <div class="n-menu-wrapper">
+        <div class="main-col">
+            <div class="n-menu" style="position: relative;">
+                <!--  menubar  -->
+                <ul class="menubar">
+                    <li class="hamburger">
+                        <span>Каталог</span>
+                    </li>
+                    <li class="menu-link special" data-menu-number="1">
+                        <a href="https://daroo.by/life">
+                            <span>Журнал DAROO Life</span>
+                        </a>
+                    </li>
+                    <li class="menu-link" data-menu-number="12">
+                        <a href="http://daroo.by/minsk/catalog?sortBy=new&amp;utm_source=menu&amp;utm_medium=url&amp;utm_campaign=new">
+                            <span>Новинки</span>
+                        </a>
+                    </li>
+                    <li class="menu-link" data-menu-number="100">
+                        <a href="https://daroo.by/minsk/podarochnye-sertifikaty">
+                            <span>Подарочные сертификаты</span>
+                        </a>
+                    </li>
+                    <li class="menu-link" data-menu-number="102">
+                        <a href="https://daroo.by/minsk/podarochnye-nabory">
+                            <span>Наборы</span>
+                        </a>
+                    </li>
+                    <li class="menu-link" data-menu-number="105">
+                        <a href="https://daroo.by/minsk/sale">
+                            <span>Акции и скидки</span>
+                        </a>
+                    </li>
+                    <li class="menu-link" data-menu-number="195">
+                        <a href="https://daroo.by/invitation?utm_source=banner-glavnaya&amp;utm_medium=cpc&amp;utm_campaign=banner-30%">
+                            <span>Получить бонусы</span>
+                        </a>
+                    </li>
+                    <li class="menu-link" data-menu-number="200">
+                        <a href="https://corp.daroo.by/">
+                            <span>Корпоративные подарки</span>
+                        </a>
+                    </li>
+                    <li class="menu-link" data-menu-number="65500">
+                        <a href="https://daroo.by/activate">
+                            <span>Активировать сертификат</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- // menubar  -->
+                <!-- menubar menu -->
+                <div class="subnav">
+                    <div class="nav-menu-flex nav-menu-3col second hidden" data-menu-number="100">
+                        <div class="nav-column nav-links-column">
+                            <a href="https://daroo.by/minsk/zhenshhine">Подарки для женщин</a>
+                            <a href="https://daroo.by/minsk/muzhchine">Подарки для мужчин</a>
+                            <a href="https://daroo.by/minsk/dlja-dvoih">Подарки для двоих</a>
+                            <a href="https://daroo.by/minsk/rebenku">Подарки ребенку</a>
+                        </div>
+                        <div class="nav-column nav-links-column">
+                            <a href="https://daroo.by/minsk/sale">Акции и скидки</a>
+                            <a href="https://daroo.by/minsk/club">Программа лояльности</a>
+                            <a href="https://daroo.by/minsk/podarochnye-nabory">Подарочные наборы</a>
+                            <a href="https://daroo.by/corp">Корпоративные подарки</a>
+                        </div>
+                        <div class="nav-column nav-links-column">
+                            <a href="https://daroo.by/minsk/contacts">Где купить</a>
+                            <a href="https://daroo.by/minsk/dostavka-i-oplata">Доставка и оплата</a>
+                            <a href="https://daroo.by/activate">Активировать сертификат</a>
+                        </div>
+                        <div class="nav-column nav-cards-column">
+                            <div class="nav-card">
+                                <a href="https://daroo.by/life/onlajn-podarki-sebe-ili-druzyam">
+                                    <figure>
+                                        <img src="https://daroo.by/media/cache/blog_main_menu_desktop/images.daroo.gift/daroo.by/gallery/blogsnippets/154/2020/03/23/5e79037c6dd5c.jpg">
+                                        <figcaption> Один дома. Семь идей для онлайн-подарков себе или друзьям
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="nav-card">
+                                <a href="https://daroo.by/life/kak-vybrat-hobbi">
+                                    <figure>
+                                        <img src="https://daroo.by/media/cache/blog_main_menu_desktop/images.daroo.gift/daroo.by/gallery/blogsnippets/138/2019/04/16/5cb59e8497b4d.jpg">
+                                        <figcaption> Чем заняться: выбираем новое хобби</figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="nav-card">
+                                <a href="https://daroo.by/life/chto-podarit-muzhchine-u-kotorogo-vse-est">
+                                    <figure>
+                                        <img src="https://daroo.by/media/cache/blog_main_menu_desktop/images.daroo.gift/daroo.by/gallery/blogsnippets/136/2019/02/21/5c6ebeee2614f.jpg">
+                                        <figcaption> Что подарить мужчине, у которого все есть</figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // menubar menu -->
+                <!-- catalog menu -->
+                <div class="catalog-menu-wrap">
+                    <div class="catalog-menu-container">
+                        <!-- Список заглавных категорий -->
+                        <nav class="part-titles">
+                            <ul>
+                                <li data-cat-id="33">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/kvesty"> Квесты </a>
+                                </li>
+                                <li class="empty-part" data-cat-id="5000107">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/sale"> Акции и скидки </a>
+                                </li>
+                                <li data-cat-id="1">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/krasota-i-zdorovje"> Услуги
+                                        салонов красоты </a>
+                                </li>
+                                <li data-cat-id="2">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/aktivnyj-otdyh"> Активный
+                                        отдых </a>
+                                </li>
+                                <li class="empty-part" data-cat-id="3">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/razvlechenija"> Развлечения и
+                                        шоу-программы </a>
+                                </li>
+                                <li class="empty-part" data-cat-id="4">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/romantika"> Романтика </a>
+                                </li>
+                                <li data-cat-id="5">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/obuchenie-i-master-klassy">
+                                        Обучение и мастер-классы </a>
+                                </li>
+                                <li data-cat-id="6">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/fotosessii"> Фотосессии </a>
+                                </li>
+                                <li class="empty-part" data-cat-id="7">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/ekskljuziv"> Эксклюзив </a>
+                                </li>
+                                <li data-cat-id="17">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/fitnes"> Фитнес и спорт </a>
+                                </li>
+                                <li data-cat-id="34">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/gurmanam"> Гурманам </a>
+                                </li>
+                                <li class="empty-part" data-cat-id="200">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/podarochnye-nabory">
+                                        Подарочные наборы </a>
+                                </li>
+                                <li data-cat-id="400">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/avtomobili">
+                                        Автолюбителям </a>
+                                </li>
+                                <li class="empty-part" data-cat-id="5000223">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/zhivotnye"> Животные </a>
+                                </li>
+                                <li data-cat-id="5000246">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/puteshestviya">
+                                        Путешествия </a>
+                                </li>
+                                <li class="empty-part" data-cat-id="5000350">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/contactless-gifts">
+                                        Бесконтактные подарки </a>
+                                </li>
+                                <li class="empty-part" data-cat-id="93">
+                                    <a class="menu-item-big" href="https://daroo.by/minsk/catalog"> Весь каталог </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="subtitles-container" data-cat-id="33" style="grid-template-columns: 1fr;">
+                            <div class="subtitles-columns-wrap">
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/horror-kvesty">Хоррор-квесты</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/priklyuchencheskie-kvesty">Приключенческие
+                                                квесты</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/ehkshn-kvesty">Экшен-квесты</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/zhivye-kvesty">Живые квесты</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/kvesty-performansy">Квесты-перформансы</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subtitles-container" data-cat-id="1" style="grid-template-columns: 1fr;">
+                            <div class="subtitles-columns-wrap">
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/bani-i-sauny">Бани и сауны</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/lifting">Лифтинг</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/tatu">Тату</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/permanentnyj-makiyazh">Перманентный
+                                                макияж</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/hudojestvennaya-tatuirovka">Художественная
+                                                татуировка</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/korrekciya-figury">Коррекция фигуры</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/limfodrenazh">Лимфодренаж</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/apparatnaya-korrekciya-figury">Аппаратная
+                                                коррекция фигуры</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/ehpilyaciya">Эпиляция</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/lazernaya-ehpilyaciya">Лазерная эпиляция</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/shugaring">Шугаринг</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/voskovaya-ehpilyaciya">Восковая эпиляция</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/uhod-za-brovyami-i-resnicami">Уход за
+                                                бровями и ресницами</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/korrekciya-brovej">Коррекция бровей</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/narashchivanie-resnic">Наращивание
+                                                ресниц</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/laminirovanije-resnic-i-brovej">Ламинирование
+                                                ресниц и бровей</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/spa-kompleksy">SPA-процедуры и комплексы</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/shokoladnoe-obertyvanie">Шоколадное
+                                                обертывание</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/vodoroslevoe-obertyvanie">Водорослевое
+                                                обертывание</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/kedrovaya-bochka">Кедровая бочка</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/spa-dlya-dvoih">SPA для двоих</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/manikjur-i-pedikjur">Уход за руками и
+                                                ногами</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/manikyur">Маникюр</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/pedikyur">Педикюр</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/kompleksy-dlya-ruk-i-nog">Комплексы для рук
+                                                и ног</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/parafinoterapiya">Парафинотерапия</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/kosmetologiya">Косметология</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/kosmetologiya-lica">Косметология лица</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/kosmetologiya-dlya-volos">Косметология для
+                                                волос</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/kosmeticheskoye-otbelivanie-zubov">Косметическое
+                                                отбеливание зубов</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/apparatnaya-kosmetologya">Аппаратная
+                                                косметология</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/uhod-za-volosami">Уход за волосами</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/strizhka">Стрижка</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/ukladka">Укладка</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/strizhka-v-barbershope">Барбершопы</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/kompleksy-po-uhodu-za-volosami">Процедуры и
+                                                комплексы для волос</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/spa-uhod-dla-volos">SPA-уход для волос</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/vypryamlenie-volos">Выпрямление волос</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/uhod-za-licom">Уход за лицом</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/spa-dlya-lica">SPA для лица</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/chistka-lica">Чистка лица</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/massazh-lica">Массаж лица</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/lifting-lica">Лифтинг лица</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/maski-dlya-lica">Маски для лица</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/procedury-dlya-lica">Процедуры для лица</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/massazh">Массаж</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/massazh-kamnyami">Массаж камнями</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/massazh-golovy">Массаж головы</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/rasslablyayushchij-massazh">Расслабляющий
+                                                массаж</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/tajskij-massazh">Тайский массаж</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/anticellyulitnyj-massazh">Антицеллюлитный
+                                                массаж</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/klassicheskij-massazh">Классический
+                                                массаж</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/sportivnyj-massazh">Спортивный массаж</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/medovyj-massazh">Медовый массаж</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/massazh-pohudenie">Массаж для похудения</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/massazh-po-zonam">Массаж по зонам</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subtitles-container" data-cat-id="2" style="grid-template-columns: 1fr;">
+                            <div class="subtitles-columns-wrap">
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/polety">Полеты</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/ekstrim">Экстрим</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/vodnye-razvlecheniya">Водные развлечения</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/jekskursii">Экскурсии</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/virtualnaya-realnost">Виртуальная
+                                                реальность</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/katanija-i-progulki">Катания и прогулки</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/karting">Картинг</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/kataniya-na-kvadrociklah">Катания на
+                                                квадроциклах</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/kataniya-na-loshadyah">Катания на
+                                                лошадях</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/dzhip-tury">Джип-туры</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/kataniya-na-tankah">Катания на танках</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/kataniya-na-poni">Катания на пони</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/vnedorozhnye-motocikly">Внедорожные
+                                                мотоциклы</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/sportivnye-igry">Активные игры</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/pejntbol">Пейнтбол</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/luchnye-boi">Лучные бои</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/lazertag">Лазертаг</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/strajkbol">Страйкбол</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/verevochnyj-park">Веревочный парк</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/bouling">Боулинг</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/tennis">Теннис</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/skalodrom">Скалодром</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/batuty">Батуты</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subtitles-container" data-cat-id="5" style="grid-template-columns: 1fr;">
+                            <div class="subtitles-columns-wrap">
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/karera">Карьера</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/obuchenie-izo">Обучение ИЗО</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/obuchenie-yazykam">Обучение языкам</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/obuchenie-vozhdeniyu">Обучение вождению</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/obuchenie-tancam">Обучение танцам</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/kulinarnye-kursy">Кулинарные курсы</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/sportivnoe-obuchenie">Спортивное
+                                                обучение</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/obuchenie-muzyke">Обучение музыке</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/obuchenie-barabanam">Обучение барабанам</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/obuchenie-fortepiano">Обучение
+                                                фортепиано</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/obuchenie-gitare">Обучение гитаре</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/obuchenie-vokalu">Обучение вокалу</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subtitles-container" data-cat-id="6" style="grid-template-columns: 1fr;">
+                            <div class="subtitles-columns-wrap">
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/detskaya-fotosessiya">Детская фотосессия</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/love-story-fotosessiya">Фотосессия Love
+                                                Story</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/semejnaya-fotosessiya">Семейная
+                                                фотосессия</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/fotosessiya-dlya-beremennyh">Фотосессия для
+                                                беременных</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/svadebnaya-fotosessiya">Свадебная
+                                                фотосессия</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/fotosessiya-novorozhdennyh">Фотосессия
+                                                новорожденных</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/fotosessiya-v-studii">Фотосессия в
+                                                студии</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/fotosessiya-s-zhivotnymi">Фотосессия с
+                                                животными</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/videosemka">Видеосъемка</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/fotopechat">Фотопечать</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subtitles-container" data-cat-id="17" style="grid-template-columns: 1fr;">
+                            <div class="subtitles-columns-wrap">
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/ems-trenirovka">ЭМС-тренировка</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/tancevalnyj-fitnes">Танцевальный фитнес</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/zanyatiya-v-trenazhernom-zale">Занятия в
+                                                тренажерном зале</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/zanyatiya-jogoj">Занятия йогой</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subtitles-container" data-cat-id="34" style="grid-template-columns: 1fr;">
+                            <div class="subtitles-columns-wrap">
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/kafe-i-restorany">Кафе и рестораны</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/degustacii">Дегустации</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/ceremonii">Церемонии</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subtitles-container" data-cat-id="400" style="grid-template-columns: 1fr;">
+                            <div class="subtitles-columns-wrap">
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/mojka-mashiny">Мойка машины</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/chistka-salona">Чистка салона</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/tyuning-avto">Тюнинг авто</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subtitles-container" data-cat-id="5000246" style="grid-template-columns: 1fr;">
+                            <div class="subtitles-columns-wrap">
+                                <div class="subtitles-column">
+                                    <ul>
+                                        <li>
+                                            <a href="https://daroo.by/minsk/poezdki-po-belarusi">Поездки по Беларуси</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // catalog menu -->
+            </div>
+        </div>
+    </div>
+    <!-- NEW MENU END -->
+    <section class="main-col">
+        <div class="nav" itemprop="breadcrumb">
+            <a href="https://daroo.by/" itemprop="url"> Главная </a>
+            <span class=''>/</span>
+            <a href="https://daroo.by/minsk/catalog" itemprop="url"> Каталог </a>
+            <span class=''>/</span>
+            <a href="https://daroo.by/minsk/aktivnyj-otdyh" itemprop="url"> Активный отдых </a>
+            <span class=''>/</span>
+            <a href="https://daroo.by/minsk/polety" itemprop="url"> Полеты </a>
+            <span class=''>/</span>
+            <span href="https://daroo.by/minsk/polet-na-samolete" itemprop="url"> Обзорные полеты на самолете </span>
+        </div>
+        <script>
+          $(document).ready(function () {
+            $('.feedback-mask').mask('375 (**) *** - ** - **')
+          })
+        </script>
+        <script src="/js/Utils/Url.js"></script>
+        <script src="/js/Utils/Str.js"></script>
+        <script src="/js/order/Validate.js"></script>
+        <script src="/js/daroo/product/Product.js?v=1.1.7"></script>
+        <script src="/js/Utils/php.js"></script>
+        <link href="/css/order/modal.css" rel="stylesheet" />
+        <script>
+          $(function () {
+            new Product('product')
+            Product.set('rebasketUrl', '/minsk/cart/get/rebasket')
+            Product.set('basketUrl', '/minsk/basket.html')
+            Product.initProduct()
+          })
+        </script>
+        <div class="textBlock">
+            <div class="innerTextInfo clear">
+                <div class="innerTextInfoLeft">
+                    <!--  details -->
+                    <div class="details-page">
+                        <div class="company-box">
+                            <figure>
+                                <a class="title-link" href="/minsk/aviaklub-crazy-fly/">
+                                    <img alt="" src="/images/5f4dfadbc398c.png">
+                                </a>
+                            </figure>
+                            <div class="company-short">
+                    <span class="h3-supplier">
+                      <style type="text/css">
+                        a.title-link:hover {
+                          color: #343434
+                        }
+                      </style>
+                      <a class="title-link" href="/minsk/aviaklub-crazy-fly/"> Авиаклуб Crazy Fly </a>
+                    </span>
+                                <p> УНП 1923339491 ИП Корнович Олег Николаевич </p>
+                                <a class="maplink product-maplink no-popup" href="#">
+                                    <span>Посмотреть на карте</span>
+                                </a>
+                            </div>
+                            <div class="company-box-btn">
+                                <a class="btn-2" href="/minsk/aviaklub-crazy-fly/"> Подробнее о компании </a>
+                            </div>
+                        </div>
+                        <h1>Почувствуй себя асом и соверши экстремальный прыжок над красотми белорусского края или
+                            соверши безбашенный полет за штурвалом самолета</h1>
+                        <ul class="detail-info clear">
+                            <li style="display: none;">Подарили 0</li>
+                            <li class="review-anchor">
+                                <span>5 отзывов</span>
+                            </li>
+                            <li style="display:none"></li>
+                            <li class="maplink no-popup">
+                                <a>
+                                    <span>Минск</span>
+                                </a>
+                            </li>
+                            <li>
+                                <meta content="4.00" itemprop="ratingValue">
+                                <meta content="1" itemprop="reviewCount">
+                                Рейтинг услуги
+                                <div class="detail-rating">
+                                    <span style="width:100%;"></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- slider -->
+                        <script>
+                          $(document).ready(function () {
+                            $('.play').attr('rel', 'media-gallery').fancybox({
+                              openEffect: 'none',
+                              closeEffect: 'none',
+                              prevEffect: 'none',
+                              nextEffect: 'none',
+                              arrows: false,
+                              helpers: {
+                                media: {},
+                                buttons: {}
+                              }
+                            })
+                          })
+                        </script>
+                        <div class="detail-slider">
+                            <span class="discount">Скидка до 11%</span>
+                            <div class="slider-holder">
+                                <ul class="details-slider">
+                                    <li itemprop="image">
+                                        <img alt="Почувствуй себя пилотом и насладись красотой белорусского края"
+                                             itemprop="contentUrl"
+                                             src="https://daroo.by/media/cache/original_image/images.daroo.gift/daroo.by/gallery/productbanner/5003233/2020/09/01/5f4e08f0ed6c5.jpg">
+                                        <div class="slider-desc">
+                                            <div class="desc">
+                                                <p itemprop="description">Вы поклонник острых ощущений? Мечтаете
+                                                    подняться в небо и не только? Стоит оторваться от земли и
+                                                    организовать не забываемый полет, чтобы осуществить свою мечту.
+                                                    Отдохните от повседневной жизни и убедитесь, что мир выглядит
+                                                    совершенно иначе, чем прежде. Море адреналина, море впечатлений и
+                                                    потрясающий полет над красотами родного края гарантированы! </p>
+                                                <a class="scrollto" href="#">
+                                                    <!-- -->
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- // slider -->
+                        <!-- detail content -->
+                        <div class="detail-content">
+                            <div class="detail-order-holder product-detail-order-holder">
+                                <div class="detail-order-panel wback">
+                                    <!-- detail content -->
+                                    <div class="detail-content">
+                                        <div class="accordion-content product-accordion">
+                                            <div class="row">
+                                                <div class="accordion-content-title">
+                                                    <p class="title"> Супер экстремал. 500 метров над землей в полном
+                                                        одиночестве. Свободный полет в прохладную воду в жаркий
+                                                        день. </p>
+                                                    <p class="note">
+                                                        <span> Гарантия качества: В случае неудачного приземления мы вернем Вам всю потраченную сумму! </span>
+                                                        <span class='stocks-left'>Осталось: <span class='stock-left'>13 дней 13 часов</span></span>
+                                                    </p>
+                                                </div>
+                                                <div class="accordion-content-discount">
+                                                    <span> -4% </span>
+                                                    <p>
+                                                        <em style="position: relative"> 1145.83 руб. </em>
+                                                    </p>
+                                                </div>
+                                                <div class="accordion-content-price" style="width: 160px;">
+                                                    <p>
+                                                        <span>1100.00</span> руб.
+                                                    </p>
+                                                </div>
+                                                <div class="accordion-content-booking" style="width: 180px;">
+                                                    <a class="btn-2" data-id="5026063"
+                                                       data-name="Почувствуй себя пилотом и насладись красотой белорусского края"
+                                                       data-price="220.00"
+                                                       data-supplier="Авиаклуб Crazy Fly"
+                                                       data-usage-condition="Супер экстремал"
+                                                       href="" id="booking-btn"
+                                                       style="width: 158px;"> Записаться на услугу </a>
+                                                </div>
+                                                <div class="accordion-content-buy" style="width: 180px;">
+                                                    <a class="btn-2" href="#"
+                                                       id="set-order-btn"> Купить сертификат </a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="accordion-content-title">
+                                                    <p class="title"> Русская рулетка. Выбери себе парашют и убедись,
+                                                        что он рабочий во время прыжка. </p>
+                                                    <p class="note">
+                                                        <span> Длительность прыжка: 3-15 мин (в зависимости от парашюта) </span>
+                                                        <span class='stocks-left'>Осталось: <span class='stock-left'>11 дней 13 часов</span>
+                                </span>
+                                                    </p>
+                                                </div>
+                                                <div class="accordion-content-discount">
+                                                    <span> -11% </span>
+                                                    <p>
+                                                        <em style="position: relative"> 2247.19 руб. </em>
+                                                    </p>
+                                                </div>
+                                                <div class="accordion-content-price" style="width: 160px;">
+                                                    <p>
+                                                        <span>2000.00</span> руб.
+                                                    </p>
+                                                </div>
+                                                <div class="accordion-content-booking" style="width: 180px;">
+                                                    <a class="btn-2" data-id="5026062"
+                                                       data-name="Почувствуй себя пилотом и насладись красотой белорусского края"
+                                                       data-price="400.00"
+                                                       data-supplier="Авиаклуб Crazy Fly"
+                                                       data-usage-condition="Русская рулетка"
+                                                       href="" id="booking-btn"
+                                                       style="width: 158px;"> Записаться на услугу </a>
+                                                </div>
+                                                <div class="accordion-content-buy" style="width: 180px;">
+                                                    <a class="btn-2" href="#"
+                                                       id="set-order-btn"> Купить сертификат </a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="accordion-content-title">
+                                                    <p class="title"> Я в себя верю. 60 минутный полет в гордом
+                                                        одиночестве. Вы за штурвалом, пилот на радиосвязи. </p>
+                                                    <p class="note">
+                                                        <span> Длительность полета: зависит от Вас, максимум 60 мин.</span>
+                                                    </p>
+                                                </div>
+                                                <div class="accordion-content-discount"></div>
+                                                <div class="accordion-content-price" style="width: 160px;">
+                                                    <p>
+                                                        <span>2500.00</span> руб.
+                                                    </p>
+                                                </div>
+                                                <div class="accordion-content-booking" style="width: 180px;">
+                                                    <a class="btn-2" data-id="5025454"
+                                                       data-name="Почувствуй себя пилотом и насладись красотой белорусского края"
+                                                       data-price="140.00"
+                                                       data-supplier="Авиаклуб Crazy Fly"
+                                                       data-usage-condition="Я в себя верю"
+                                                       href="" id="booking-btn"
+                                                       style="width: 158px;"> Записаться на услугу </a>
+                                                </div>
+                                                <div class="accordion-content-buy" style="width: 180px;">
+                                                    <a class="btn-2" href="#"
+                                                       id="set-order-btn"> Купить сертификат </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="buttons-holder">
+                          <span class="show-all">
+                            <a class="btn" href="#"> Посмотреть все цены </a>
+                          </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collect-holder">
+                                    <a class="collect-btn-right" href="#">
+                        <span>
+                          <!-- -->
+                        </span>
+                                    </a>
+                                    <div class="content-holder">
+                                        <div class="scroll-holder">
+                                            <div class="scroll-pane">
+                                                <ul class="item-list-holder clear">
+                                                    <li>
+                                                        <a href="#">
+                                  <span class="item-holder">
+                                    <img alt="" src="/img/design/desktop/img-item.png">
+                                    <span class="s-desc-holder">
+                                      <span class="s-title">Фотосессия "Love story"</span>
+                                      <span class="s-price">200 000 – 3 000 000 руб.</span>
+                                    </span>
+                                    <span class="bg-hover">
+                                      <!-- -->
+                                    </span>
+                                  </span>
+                                                        </a>
+                                                        <span class="close-btn">
+                                  <span class="remove">x</span>
+                                </span>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <!-- -->
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <!-- -->
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <!-- -->
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <ul class="scroll-faq-block">
+                                                <li>
+                                                    <a class="btn" href="#">Оформить сет</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <span>Как это работает</span>
+                                                    </a>
+                                                    <br>
+                                                    <a href="#">
+                                                        <span>Посмотреть сеты других юзеров</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="full-desc">
+                                <div class="desc">
+                                    <h2>Подробная информация</h2>
+                                </div>
+                                <ul class="detail-list">
+                                    <li>
+                                        <figure>
+                                            <img src="/img/editor/daroo.by/2020/09/01/5f4e06adb2e93.png">
+                                        </figure>
+                                        <div class="article">
+                                            <div>
+                                                <h3>Супер экстремал!</h3> Прыжок без парашюта – это увлекательный полет
+                                                и море адреналина. Вы поднимаетесь на высоту 500 метров с пилотом и
+                                                после мы Вас катапультируем над большим озером. После приземления на
+                                                воду Вас встретит наш катер с опытной командой. Этот не забываемый
+                                                прыжок заказали уже сотни человек!
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="article">
+                                            <div>
+                                                <h3>Русская рулетка</h3> Вы никогда не совершали ничего по-настоящему
+                                                безбашенного? Значит эта услуга подходит именно ВАМ! Таких эмоций Вы не
+                                                испытывали и не испытаете больше никогда. Перед вылетом ВЫ САМИ
+                                                ВЫБИРАЕТЕ СЕБЕ ПАРАШЮТ, НО!!! Один из них не раскроется в полете что бы
+                                                Вы ни делали. У Вас есть один шанс из шести испытать абсолютно свободный
+                                                полет с высоты 700 метров на мягкие стога сена в открытом поле.
+                                            </div>
+                                        </div>
+                                        <figure>
+                                            <img src="/img/editor/daroo.by/2020/09/01/5f4e06e743ada.png">
+                                        </figure>
+                                    </li>
+                                    <li>
+                                        <figure>
+                                            <img src="/img/editor/daroo.by/2020/09/01/5f4e06f645234.png">
+                                        </figure>
+                                        <div class="article">
+                                            <div>
+                                                <h3>Я в себя верю</h3> Одиночный полет на самолете даст возможность не
+                                                только полетать и сделать красивые фотографии, но и узнать больше о
+                                                самолётах, понять, как они летают, получить ответы на интересующие вас
+                                                вопросы по радиосвязи от опытного пилота-инструктора и попробовать себя
+                                                в роли самостоятельного пилота.
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="detail-desc-features clear">
+                                <h2>Преимущества воздушных полетов от Crazy Fly</h2>
+                                <ul>
+                                    <li>
+                                        <figure>
+                                            <img src="/img/editor/daroo.by/2017/10/18/59e74cf3012e3.jpg">
+                                            <br>
+                                        </figure>
+                                        <h3>Безопасность и комфорт <br>
+                                        </h3>
+                                    </li>
+                                    <li>
+                                        <figure>
+                                            <img src="/img/editor/daroo.by/2017/10/18/59e74d00eb93d.jpg">
+                                            <br>
+                                        </figure>
+                                        <h3>Возможность выбрать маршрут <br>
+                                        </h3>
+                                    </li>
+                                    <li>
+                                        <figure>
+                                            <img src="/img/editor/daroo.by/2017/10/18/59e74d634c9f1.jpg">
+                                            <br>
+                                        </figure>
+                                        <h3>Ваша жизнь с нового ракурса <br>
+                                        </h3>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p></p>
+                            <div class="full-desc">
+                                <div class="desc">
+                                    <p>Воплощайте мечты в реальность, стремитесь выше — приобретайте сертификаты на
+                                        воздушные полеты и прыжки с/без парашюта для себя и близких, которым всегда
+                                        хотелось испытать что-то по-настоящему новое! <br>
+                                        <br>
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="detail-faq-block infoscroll-content">
+                                <div class="row">
+                                    <div class="col">
+                                        <dl>
+                                            <dt>
+                                                <figure>
+                                                    <img alt="Портфель" src="/img/design/desktop/faq-img-01.png">
+                                                </figure>
+                                            </dt>
+                                            <dd>
+                                                <div class="desc">
+                                                    <h3>Что взять с собой?</h3>
+                                                    <p>Подарочный сертификат.</p>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="col">
+                                        <dl>
+                                            <dt>
+                                                <figure>
+                                                    <img alt="Рукопожатие" src="/img/design/desktop/faq-img-06.png">
+                                                </figure>
+                                            </dt>
+                                            <dd>
+                                                <div class="desc">
+                                                    <h3>С кем пойти?</h3>
+                                                    <p>С компанией до 3 человек.</p>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <dl>
+                                            <dt>
+                                                <figure>
+                                                    <img alt="Календарь" src="/img/design/desktop/faq-img-02.png">
+                                                </figure>
+                                            </dt>
+                                            <dd>
+                                                <div class="desc">
+                                                    <h3>Сезон</h3>
+                                                    <p>Полеты проводятся только при благоприятных погодных условиях.</p>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="col">
+                                        <dl>
+                                            <dt>
+                                                <figure>
+                                                    <img alt="Настенные часы" src="/img/design/desktop/faq-img-03.png">
+                                                </figure>
+                                            </dt>
+                                            <dd>
+                                                <div class="desc">
+                                                    <h3>Расписание и время</h3>
+                                                    <p>Ежедневно с 10:00 до 20:00. По предварительной записи.</p>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <dl>
+                                            <dt>
+                                                <figure>
+                                                    <img alt="Горячая кружка" src="/img/design/desktop/faq-img-09.png">
+                                                </figure>
+                                            </dt>
+                                            <dd>
+                                                <div class="desc">
+                                                    <h3>Дополнительные возможности</h3>
+                                                    <p>По предварительному согласованию возможно согласовать другой тип
+                                                        услуги </p>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // detail content -->
+                        <!-- map -->
+                        <div class="map">
+                            <h2 class="title h2-title">Куда ехать</h2>
+                            <div id="map"
+                                 style="height: 380px; width: 100%; position: relative; overflow: hidden;"></div>
+                        </div>
+                        <!-- // map -->
+                        <script>
+                          var markers = []
+                          var markerCluster
+                          var map
+                          $(document).ready(function () {
+                            initMap1()
+
+                            function initMap1 () {
+                              var center = {
+                                lat: parseFloat('54.261756'),
+                                lng: parseFloat('26.857588')
+                              }
+                              map = L.map('map', {
+                                zoomControl: false,
+                                attributionControl: false,
+                                maxZoom: 17,
+                                minZoom: 6
+                              })
+                              map.setView([center.lat, center.lng], 19)
+                              L.control.attribution({
+                                prefix: ''
+                              }).addAttribution(' < a href = "http://maps.sputnik.ru/" > Спутник < /a> &copy; OpenStreetMap').addTo(map)
+                              L.control.zoom({
+                                position: 'bottomleft'
+                              }).addTo(map)
+                              var domainOrigin = window.location.origin
+                              L.tileLayer(domainOrigin + '/tiles/{z}/{x}/{y}.png', {
+                                maxZoom: 19,
+                                minZoom: 1
+                              }).addTo(map)
+                              bounds = []
+                              markers = L.markerClusterGroup({
+                                //                    singleMarkerMode: true,
+                                chunkedLoading: true,
+                                spiderfyOnMaxZoom: false,
+                                spiderfyDistanceMultiplier: 3,
+                                showCoverageOnHover: false,
+                                zoomToBoundsOnClick: false,
+                              })
+                              var infoWindowContent = [' < div class = \'ym-single-balloon-div\'>', ' < div class = \'caption\'>', '$[properties.clusterCaption]', '</div>', ' < div class = entry > ',
+                                ' < div class = "bold ym-header-div" > $[properties.balloonContentHeader] < /div>',
+                                ' < div > $[properties.balloonContentBody] < /div>',
+                                ' < div class = "author ym-footer-div ym-single-footer" > $[properties.balloonContentFooter] < /div>',
+                                ' < /div>',
+                                ' < /div>'
+                              ].join('')
+                              var custIcon = L.icon({
+                                iconUrl: '/img/bullet.png',
+                                iconSize: [41, 39], // size of the icon
+                                //                    iconSize:     [38, 95], // size of the icon
+                                //                    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+                                iconAnchor: [19, 38], // point of the icon which will correspond to marker's location
+                                popupAnchor: [-3, -21] // point from which the popup should open relative to the iconAnchor
+                              })
+                              var curContact = {}
+                              var curContent = infoWindowContent
+                              var curCoords = {
+                                lat: parseFloat('54.261756'),
+                                lng: parseFloat('26.857588')
+                              }
+                              curContent = curContent.replace('$[properties.clusterCaption]', ' < div class = \'gm-caption-div\'> < img src = \'https://daroo.by/media/cache/supplier/images.daroo.gift/daroo.by/gallery/partnerlogo/5000997/2020/09/01/5f4dfadbc398c.png\' /> < span > < span class = \'gm-price-span\'> < span class = \'gm-price\'>220.00</span> < span class = \'currency\'>руб.</span> < /span> < /span> < /div>'.replace(/([\"])/g, '\x22'))
+                              curContent = curContent.replace('$[properties.balloonContentHeader]', ' < span class = \'gm-supplier-name\'>Авиаклуб Crazy Fly</span>'.replace(/([\"])/g, '\x22'))
+                              curContent = curContent.replace('$[properties.balloonContentBody]', ' < span class = \'gm-body-span\'> < span > Pilot school 30. Почувствуй себя пилотом.30 минут для 1 человека < /span> < /span>'.replace(/([\"])/g, '\x22'))
+                              curContent = curContent.replace('$[properties.balloonContentFooter]', ' < span class = \'gm-footer-span\'> < span > < b > Адрес < /b>: Молодечненский район, д. Мойсичи (аэродром по согласованию) < /span> < br / > < span > < b > Время работы < /b>: ежедневно с 10:00 до 20:00 < /span> < /span>'.replace(/([\"])/g, '\x22'))
+                              curContact.latitude = curCoords.lat
+                              curContact.longitude = curCoords.lng
+                              curContact.caption = ' < div class = \'gm-caption-div\'> < img src = \'https://daroo.by/media/cache/supplier/images.daroo.gift/daroo.by/gallery/partnerlogo/5000997/2020/09/01/5f4dfadbc398c.png\' /> < span > < span class = \'gm-price-span\'> < span class = \'gm-price\'>220.00</span> < span class = \'currency\'>руб.</span> < /span> < /span> < /div>'.replace(/([\"])/g, '\x22')
+                              curContact.header = ' < span class = \'gm-supplier-name\'>Авиаклуб Crazy Fly</span>'.replace(/([\"])/g, '\x22')
+                              curContact.body = ' < span class = \'gm-body-span\'> < span > Pilot school 30. Почувствуй себя пилотом.30 минут для 1 человека < /span> < /span>'.replace(/([\"])/g, '\x22')
+                              curContact.footer = ' < span class = \'gm-footer-span\'> < span > < b > Адрес < /b>: Молодечненский район, д. Мойсичи (аэродром по согласованию) < /span> < br / > < span > < b > Время работы < /b>: ежедневно с 10:00 до 20:00 < /span> < /span>'.replace(/([\"])/g, '\x22')
+                              var markerLocation = new L.LatLng(curCoords.lat, curCoords.lng)
+                              var marker = new L.Marker(markerLocation, {
+                                title: '',
+                                data: curContact,
+                                icon: custIcon
+                              })
+                              //                marker.bindPopup(curContent);
+                              markers.addLayer(marker)
+                              bounds.push([curCoords.lat, curCoords.lng])
+                              markers.on('clusterclick', function (a) {
+                                cluster = a.layer
+                                clusterMarkers = a.layer.getAllChildMarkers()
+                                markersLength = clusterMarkers.length
+                                a = 0
+                                firstData = clusterMarkers[0].options.data
+                                firstLong = firstData.longitude
+                                firstLat = firstData.latitude
+                                markerContent = ''
+                                var contentItemMarkup = [' < div class = entry > ',
+                                  ' < div class = "bold gm-header-div" > $[properties.balloonContentHeader] < /div>',
+                                  ' < div class = "gm-body-div" > $[properties.balloonContentBody] < /div>',
+                                  ' < div class = "author gm-footer-div" > $[properties.balloonContentFooter] < /div>',
+                                  ' < /div>'
+                                ].join('')
+                                var accordion = ' < div class = map - accordion > '
+                                for ($i = 0; $i < markersLength; $i++) {
+                                  if (clusterMarkers[$i].options.data.longitude == firstLong && clusterMarkers[$i].options.data.latitude == firstLat) {
+                                    a = a + 1
+                                  }
+                                  var curInfo = clusterMarkers[$i].options.data
+                                  var $curMarkup = contentItemMarkup
+                                  $curMarkup = $curMarkup.replace('$[properties.balloonContentHeader]', curInfo.header)
+                                  $curMarkup = $curMarkup.replace('$[properties.balloonContentBody]', curInfo.body)
+                                  $curMarkup = $curMarkup.replace('$[properties.balloonContentFooter]', curInfo.footer)
+                                  accordion += ' < div class = map - accordion - item > ' +
+                                    ' < div class = map - accordion - item - title > ' + curInfo.caption +
+                                    '</div>' + ' < div class = map - accordion - item - content > ' + $curMarkup +
+                                    '</div>' + ' < /div>'
+                                }
+                                accordion += ' < /div>'
+                                if (a == markersLength) {
+                                  cluster.bindPopup(accordion).openPopup()
+                                } else {
+                                  cluster.zoomToBounds({
+                                    padding: [100, 100]
+                                  })
+                                }
+                                return false
+                              })
+                              map.addLayer(markers)
+                              map.fitBounds(bounds)
+                              return false
+                            }
+
+                            $('.product-maplink').bind('click', function (e) {})
+                            $('.maplink').click(function () {
+                              $('html, body').animate({
+                                scrollTop: $('#map').offset().top - 150
+                              }, 800)
+                            })
+                          })
+                        </script>
+                        <style type="text/css">
+                          div.map-accordion-item {
+                            overflow: hidden;
+                            border-bottom: 1px solid #ccc;
+                            margin-top: 9px;
+                          }
+
+                          div.map-accordion-item:first-of-type {
+                            margin-top: 0px;
+                          }
+
+                          div.map-accordion-item-content {
+                            height: 0px;
+                            transition: height 0.25s ease-out;
+                          }
+
+                          div.map-accordion-item-content.active {
+                            height: 113px;
+                            transition: height 0.25s ease-in;
+                          }
+
+                          div.map-accordion-item-content div.entry {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            width: 280px;
+                          }
+
+                          .gm-style .gm-style-iw {
+                            width: 296px !important;
+                          }
+                        </style>
+                        <!-- faq block -->
+                        <div class="faq-block">
+                            <ul>
+                                <li>
+                                    <a href="#tabs-1-1">
+                                        <span>Сертификат для себя</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tabs-2-1">
+                                        <span>Подарочный сертификат</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tabs-3-1">
+                                        <span>Как купить сертификат?</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tabs-4-1">
+                                        <span>Как использовать сертификат?</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="holder">
+                                <div id="tabs-1-1">
+                                    <div class="info-1 clear">
+                                        <div class="holder self-holder">
+                                            <div class="col col-1 img-col">
+                                                <img alt="" src="/img/design/desktop/self_cert_pic.png">
+                                            </div>
+                                            <div class="col col-2 text-col">
+                                                <div class="text-1">
+                                                    <strong> Электронный сертификат </strong>
+                                                    <span> Доставим на e-mail или по SMS. Распечатайте и приходите за услугой. </span>
+                                                </div>
+                                                <div class="text-mid"> или</div>
+                                                <div class="text-2">
+                                                    <strong> Доставка </strong>
+                                                    <span> Доставим курьером, либо в пункт самовывоза. Возможна оплата наличными курьеру либо в пункте самовывоза </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tabs-2-1">
+                                    <div class="info-2 clear">
+                                        <div class="holder">
+                                            <div class="col col-1" style="padding: 113px 0 0 0;">
+                                                <p class="title">Яркий конверт с магнитным замком и мягким покрытием</p>
+                                                <ul class="cover-slider">
+                                                    <li>
+                                                        <img alt="" src="/img/design/desktop/cover-3.png">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col col-2">
+                                                <img alt="" src="/img/design/desktop/st-img.png">
+                                            </div>
+                                            <div class="col col-3 text-col">
+                                                <div class="text-1">
+                                                    <strong> Электронный сертификат </strong>
+                                                    <span> Извещение о подарке в SMS или полноценное поздравление на e-mail </span>
+                                                </div>
+                                                <div class="text-mid"> или</div>
+                                                <div class="text-2">
+                                                    <strong> Сертификат в конверте </strong>
+                                                    <span> Фирменный бланк в подарочном конверте с возможностью написать поздравление при заказе </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tabs-3-1">
+                                    <ul class="info-3">
+                                        <li>
+                                            <div class="block">
+                                                <figure>
+                                                    <img alt="" src="/img/design/desktop/info-img-01.png">
+                                                </figure>
+                                                <p class="title">Доставка курьером</p>
+                                                <p>Закажите подарок в желаемом оформлении с доставкой на свой адрес или
+                                                    в руки получателю. </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="block">
+                                                <figure>
+                                                    <img alt="" src="/img/design/desktop/info-img-02.png">
+                                                </figure>
+                                                <p class="title">Фирменные магазины</p>
+                                                <p>Оплатить и забрать подарочный сертификат можно в фирменных магазинах
+                                                    DAROO или в розничной сети партнеров. <br>
+                                                    <a href="https://daroo.by/minsk/contacts">Расположение магазинов</a>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="block">
+                                                <figure>
+                                                    <img alt="" src="/img/design/desktop/info-img-03.png">
+                                                </figure>
+                                                <p class="title">Электронные сертификаты</p>
+                                                <p>Хотите быструю доставку подарка? Или лучше поздравить заранее с
+                                                    доставкой в точно заданное время? Любой подарок можно отправить с
+                                                    электронным уведомлением по SMS и e-mail. </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="tabs-4-1">
+                                    <div class="info-4 clear">
+                                        <div class="col col-1 self">
+                                            <strong class="col-header"> Сертификат для себя </strong>
+                                            <ol class="numbered-styled-list">
+                                                <li>
+                                                    <span> Не требует обязательной активации </span>
+                                                </li>
+                                                <li>
+                                                    <span> Контакты провайдера на сертификате </span>
+                                                </li>
+                                                <li>
+                                                    <span> Наслаждайтесь </span>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <div class="col col-2 gift">
+                                            <strong class="col-header"> Подарочный сертификат </strong>
+                                            <ol class="numbered-styled-list">
+                                                <li>
+                                                    <span> Не требует обязательной активации </span>
+                                                </li>
+                                                <li>
+                                                    <span> Контакты провайдера в личном кабинете и на сертификате </span>
+                                                </li>
+                                                <li>
+                                                    <span> Наслаждайтесь </span>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // faq block -->
+                        <!-- catalog collection -->
+                        <div class="detail-collect">
+                            <div class="collect-title"> Этот сертификат в наборах</div>
+                            <div class="catalog-collect clear">
+                                <div class="gift-block">
+                                    <figure>
+                                        <img alt="" src="/img/design/desktop/gift-img.png">
+                                    </figure>
+                                    <p class="title">Дари не один, а любой</p>
+                                    <a href="https://daroo.by/minsk/podarochnye-nabory"> Все 58 наборов </a>
+                                </div>
+                                <div class="collect-tabs">
+                                    <ul>
+                                        <li>
+                                            <a href="#tabs-1">
+                                                <span>Мечты сбываются</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#tabs-2">
+                                                <span>Босс</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div id="tabs-1">
+                                        <ul class="collect-nav" id="c-nav-01">
+                                            <li>
+                                                <a data-slide-index="0" href="#">
+                              <span>
+                                <!-- -->
+                              </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-slide-index="1" href="https://daroo.by/minsk/mechty-sbyvautsa">
+                                                    <img class="lazy"
+                                                         data-original="https://daroo.by/media/cache/sets_in_filter/images.daroo.gift/daroo.by/gallery/productbanner/5002668/2018/12/10/5c0e18ad0847e.jpg"
+                                                         src="https://daroo.by/media/cache/sets_in_filter/https---daroo.by/images/noimg_logo_square.jpg">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-slide-index="2" href="https://daroo.by/minsk/mechty-sbyvautsa">
+                                                    <img class="lazy"
+                                                         data-original="https://daroo.by/media/cache/sets_in_filter/images.daroo.gift/daroo.by/gallery/productbanner/5003233/2020/09/01/5f4e08f0ed6c5.jpg"
+                                                         src="https://daroo.by/media/cache/sets_in_filter/https---daroo.by/images/noimg_logo_square.jpg">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-slide-index="3" href="https://daroo.by/minsk/mechty-sbyvautsa">
+                                                    <img class="lazy"
+                                                         data-original="https://daroo.by/media/cache/sets_in_filter/images.daroo.gift/daroo.by/gallery/productbanner/5003314/2021/01/15/6001eb61b3325.jpg"
+                                                         src="https://daroo.by/media/cache/sets_in_filter/https---daroo.by/images/noimg_logo_square.jpg">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-slide-index="4" href="https://daroo.by/minsk/mechty-sbyvautsa">
+                                                    <img class="lazy"
+                                                         data-original="https://daroo.by/media/cache/sets_in_filter/images.daroo.gift/daroo.by/gallery/productbanner/5001219/2017/03/13/58c6a750246da.jpg"
+                                                         src="https://daroo.by/media/cache/sets_in_filter/https---daroo.by/images/noimg_logo_square.jpg">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-slide-index="5" href="https://daroo.by/minsk/mechty-sbyvautsa">
+                                                    <img class="lazy"
+                                                         data-original="https://daroo.by/media/cache/sets_in_filter/images.daroo.gift/daroo.by/gallery/productbanner/5003175/2020/03/23/5e785b7cc716b.jpg"
+                                                         src="https://daroo.by/media/cache/sets_in_filter/https---daroo.by/images/noimg_logo_square.jpg">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-slide-index="6" href="https://daroo.by/minsk/mechty-sbyvautsa">
+                                                    <img class="lazy"
+                                                         data-original="https://daroo.by/media/cache/sets_in_filter/images.daroo.gift/daroo.by/gallery/productbanner/5002978/2019/11/04/5dc06733451a7.jpg"
+                                                         src="https://daroo.by/media/cache/sets_in_filter/https---daroo.by/images/noimg_logo_square.jpg">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="collect-content">
+                                            <div class="h2-collect-content">
+                                                <a href="https://daroo.by/minsk/mechty-sbyvautsa">Подарочный набор
+                                                    «Мечты сбываются»</a>
+                                            </div>
+                                            <div class="price"> 200.00 &nbspруб.</div>
+                                            <ul class="collect-list" id="c-cont-01">
+                                                <li>
+                                                    <p> О чем давно мечтает близкий вам человек? Любое его желание
+                                                        предусмотрено и занесено в подарочный набор «Мечты сбываются».
+                                                        Обладателю набора останется лишь выбрать, чего ему хочется
+                                                        больше всего, и осуществить свою мечту. </p>
+                                                </li>
+                                                <li>
+                                                    <p>Провести время с друзьями здорово, активно, весело и с пользой.
+                                                        Немногие развлечения подходят по всем этим критериям. Но
+                                                        теннисный спарринг под контролем тренера будет классным подарком
+                                                        и для поклонников этого вида спорта, и для тех, кто еще ничего
+                                                        не знает о геймах, сетах и тай-брейках. Покупайте сертификат —
+                                                        это беспроигрышный вариант презента. </p>
+                                                </li>
+                                                <li>
+                                                    <p>Вы поклонник авиации? Мечтаете подняться в небо? Стоит оторваться
+                                                        от земли и организовать полет, чтобы осуществить свою мечту.
+                                                        Отдохните от повседневной жизни и убедитесь, что мир выглядит
+                                                        совершенно иначе, чем прежде. Потрясающие виды на красоты
+                                                        родного края и море положительных впечатлений
+                                                        гарантированы! </p>
+                                                </li>
+                                                <li>
+                                                    <p>Профессиональная фотосессия — не только способ запечатлеть важные
+                                                        моменты в жизни. Она также поможет раскрепоститься: правильные
+                                                        ракурсы заставят влюбиться в себя ещё больше, а распечатанные
+                                                        фотографии будут поднимать настроение. </p>
+                                                </li>
+                                                <li>
+                                                    <p>Хотите получить максимальное расслабление и заботливый уход от
+                                                        опытных специалистов? Попробуйте посетить SPA-программу «Райское
+                                                        наслаждение» в салоне красоты «Акцент». Даже самые
+                                                        требовательные любители экзотических процедур найдут здесь целый
+                                                        букет ярких эмоций и незабываемых впечатлений. Приходите
+                                                        получать удовольствие в гордом одиночестве или зовите с собой
+                                                        близкого человека, приобретя сертификат для двоих. </p>
+                                                </li>
+                                                <li>
+                                                    <p>Вы любите активные экстремальные развлечения? Сделайте себе
+                                                        подарок и насладитесь катанием на внедорожных мотоциклах от
+                                                        компании «Эндуро Тур» в Минске! Вас ждут брендовые спортивные
+                                                        мотоциклы, взрыв адреналина и новые яркие впечатления! </p>
+                                                </li>
+                                                <li>
+                                                    <p>Подарочный сертификат на перманентный макияж в салоне красоты
+                                                        BellaNika в Минске оценит девушка, которая следит за собой и
+                                                        хочет в любой ситуации выглядеть превосходно. Перманентный
+                                                        макияж экономит не только финансы, но и личное время. Результат
+                                                        превзойдет все ожидания! </p>
+                                                </li>
+                                            </ul>
+                                            <div class="button" style="float: left !important;">
+                                                <a class="btn add-set-btn"
+                                                   data-basket-url="https://daroo.by/minsk/basket.html"
+                                                   href="https://daroo.by/minsk/cart/add/19630"> Быстрый заказ </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tabs-2">
+                                        <ul class="collect-nav" id="c-nav-02">
+                                            <li>
+                                                <a data-slide-index="0" href="#">
+                              <span>
+                                <!-- -->
+                              </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-slide-index="1" href="https://daroo.by/minsk/boss-nabor">
+                                                    <img class="lazy"
+                                                         data-original="https://daroo.by/media/cache/sets_in_filter/images.daroo.gift/daroo.by/gallery/productbanner/5002921/2019/08/26/5d638d20657fb.jpg"
+                                                         src="https://daroo.by/media/cache/sets_in_filter/https---daroo.by/images/noimg_logo_square.jpg">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-slide-index="2" href="https://daroo.by/minsk/boss-nabor">
+                                                    <img class="lazy"
+                                                         data-original="https://daroo.by/media/cache/sets_in_filter/images.daroo.gift/daroo.by/gallery/productbanner/5003317/2021/01/25/600f2d68c12ba.jpg"
+                                                         src="https://daroo.by/media/cache/sets_in_filter/https---daroo.by/images/noimg_logo_square.jpg">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-slide-index="3" href="https://daroo.by/minsk/boss-nabor">
+                                                    <img class="lazy"
+                                                         data-original="https://daroo.by/media/cache/sets_in_filter/images.daroo.gift/daroo.by/gallery/productbanner/5003233/2020/09/01/5f4e08f0ed6c5.jpg"
+                                                         src="https://daroo.by/media/cache/sets_in_filter/https---daroo.by/images/noimg_logo_square.jpg">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-slide-index="4" href="https://daroo.by/minsk/boss-nabor">
+                                                    <img class="lazy"
+                                                         data-original="https://daroo.by/media/cache/sets_in_filter/images.daroo.gift/daroo.by/gallery/productbanner/5003139/2020/02/21/5e4fa739164bc.jpg"
+                                                         src="https://daroo.by/media/cache/sets_in_filter/https---daroo.by/images/noimg_logo_square.jpg">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-slide-index="5" href="https://daroo.by/minsk/boss-nabor">
+                                                    <img class="lazy"
+                                                         data-original="https://daroo.by/media/cache/sets_in_filter/images.daroo.gift/daroo.by/gallery/productbanner/5003283/2020/12/08/5fceb77f32d48.jpg"
+                                                         src="https://daroo.by/media/cache/sets_in_filter/https---daroo.by/images/noimg_logo_square.jpg">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a data-slide-index="6" href="https://daroo.by/minsk/boss-nabor">
+                                                    <img class="lazy"
+                                                         data-original="https://daroo.by/media/cache/sets_in_filter/images.daroo.gift/daroo.by/gallery/productpricebanner/1206/2016/09/08/57d11bbd2d899.jpg"
+                                                         src="https://daroo.by/media/cache/sets_in_filter/https---daroo.by/images/noimg_logo_square.jpg">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="collect-content">
+                                            <div class="h2-collect-content">
+                                                <a href="https://daroo.by/minsk/boss-nabor">Подарочный набор «Босс»</a>
+                                            </div>
+                                            <div class="price"> 170.00 &nbspруб.</div>
+                                            <ul class="collect-list" id="c-cont-02">
+                                                <li>
+                                                    <p> Подарочный набор «Босс» — это прекрасная возможность удивить
+                                                        руководителя. Получатель подарка сможет запечатлеть самые яркие
+                                                        моменты со своими близкими или самостоятельно. Набор «Босс»
+                                                        многогранен и является идеальным подарком для полного оптимизма,
+                                                        успешного и уверенного в себе мужчины. </p>
+                                                </li>
+                                                <li>
+                                                    <p>Мойка и обработка кузова воском — не прихоть слишком трепетных
+                                                        автолюбителей. Это отличный подарок и необходимая процедура для
+                                                        всех, кто хочет, чтобы автомобиль сохранял внешний вид на
+                                                        протяжении долгих лет. Бесконтактная система очистки
+                                                        предотвращает появление новых микроповреждений, а воск заполняет
+                                                        неровности и восстанавливает поверхность. Кроме того, цена на
+                                                        услугу включает сытный перекус для владельца машины. </p>
+                                                </li>
+                                                <li>
+                                                    <p>Профессиональная фотосессия — это не только способ получить
+                                                        уникальные фотографии, но также и возможность сыграть новые роли
+                                                        и открыть в себе новые способности. Выбирайте индивидуальную
+                                                        фотосессию, если хотите обновить портфолио или просто получить
+                                                        качественные фото в необычном образе. Отличным подарком для
+                                                        второй половинки станет романтичная фотосессия. </p>
+                                                </li>
+                                                <li>
+                                                    <p>Вы поклонник авиации? Мечтаете подняться в небо? Стоит оторваться
+                                                        от земли и организовать полет, чтобы осуществить свою мечту.
+                                                        Отдохните от повседневной жизни и убедитесь, что мир выглядит
+                                                        совершенно иначе, чем прежде. Потрясающие виды на красоты
+                                                        родного края и море положительных впечатлений
+                                                        гарантированы! </p>
+                                                </li>
+                                                <li>
+                                                    <p>Здоровое тело, гладкая кожа и хорошее настроение. Классический
+                                                        расслабляющий массаж в Минске позволит всегда оставаться в
+                                                        тонусе и превосходно себя чувствовать. Проработка спины или
+                                                        всего тела? Цена на классический массаж зависит от того, какой
+                                                        сертификат вы выберите: на 1, 3, 5 или целых 7 сеансов. </p>
+                                                </li>
+                                                <li>
+                                                    <p>На курсах вокала, благодаря профессиональным педагогам, вы
+                                                        научитесь не только красиво исполнять любимые песни, но и
+                                                        обретете уверенность в себе, откроете много возможностей своего
+                                                        голоса, чтобы в дальнейшем развивать свои вокальные
+                                                        способности. </p>
+                                                </li>
+                                                <li>
+                                                    <p>Хотите показать «что-нибудь интересное» туристам, приобщить детей
+                                                        к истории страны или обогатиться новыми знаниями? Тогда —
+                                                        вперед, на экскурсию по военному комплексу. </p>
+                                                </li>
+                                            </ul>
+                                            <div class="button" style="float: left !important;">
+                                                <a class="btn add-set-btn"
+                                                   data-basket-url="https://daroo.by/minsk/basket.html"
+                                                   href="https://daroo.by/minsk/cart/add/15658"> Быстрый заказ </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // catalog collection -->
+                    </div>
+                    <!-- // details -->
+                </div>
+            </div>
+        </div>
+        <!-- map popup -->
+        <div id="map-popup">
+            <div class="popup-content">
+            <span class="b-close">
+              <span class="remove">X</span>
+            </span>
+                <div class="container">
+                    <div id="product-map" style="width:900px; height: 600px;"></div>
+                </div>
+            </div>
+        </div>
+        <!-- // map popup -->
+        <div class="popup" id="reviews-slider-popup">
+            <div class="popup-content">
+            <span class="b-close">
+              <span class="remove">x</span>
+            </span>
+                <ul class="pgwSlideshow">
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div id="scrollTopButton">
+            <button></button>
+        </div>
+    </section>
+    <footer class="foot" style="z-index: 0;">
+        <!-- Стили были обновлены -->
+        <style type="text/css">
+          div.partners {
+            padding: 20px 0px 20px;
+          }
+
+          div.partners-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1360px;
+            height: 40px;
+            margin: 0 auto;
+            padding: 0 30px;
+            box-sizing: border-box;
+            background-color: #fff;
+            overflow: hidden;
+          }
+
+          footer.foot.responsive div.partners-wrap {
+            margin: 0 0;
+          }
+
+          div.partners div.partners-wrap > div {
+            white-space: nowrap;
+          }
+
+          div.partners a.circle {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            border: 2px solid #343434;
+            border-radius: 50%;
+            position: relative;
+          }
+
+          div.partners a.circle::before {
+            content: "+";
+            font-size: 32px;
+            font-weight: 350;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          div.partners a.circle:hover {
+            color: #fdae2f;
+            border-color: #fdae2f;
+          }
+
+          div.partners span.text-info {
+            display: inline-block;
+            font-weight: 500;
+            width: 280px;
+            vertical-align: top;
+            padding-left: 15px;
+            white-space: normal;
+          }
+
+          div.partners span.text-info a {
+            border-bottom: 1px solid #e0e0e0;
+          }
+
+          div.partners span.text-info a:hover {
+            color: #fdae2f;
+            border-color: #fdae2f;
+          }
+
+          div.partners a.get-clients {
+            display: flex;
+            align-items: center;
+            height: 35px;
+            border-radius: 3px;
+            border: solid 1px #dec4d4;
+            padding: 0 10px;
+            box-sizing: border-box;
+            margin: 3px 10px 2px 5px;
+            font-weight: 500;
+            transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+          }
+
+          div.partners a.get-clients:hover {
+            border-color: #cca5bb;
+            box-shadow: 0 0 5px 0px rgba(222, 196, 212, 0.8);
+            color: inherit;
+          }
+
+          div.partners div.partners-wrap a img {
+            filter: grayscale(1);
+            opacity: 0.5;
+            transition: 0.2s ease-out opacity, 0.2s ease filter;
+          }
+
+          div.partners div.partners-wrap a:hover img {
+            filter: grayscale(0);
+            opacity: 1;
+          }
+        </style>
+        <div class="partners">
+            <div class="partners-wrap">
+                <div>
+                    <a class="circle" href="https://forms.amocrm.ru/vclcmx" target="_blank"></a>
+                    <!-- Для красивого переноса строки, лучше использовать неразрывный пробел внутри цифры кол-ва клиентов, либо жестко задать перенос <br> перед этой цифрой. -->
+                    <span class="text-info"> 1 470 компаний в 13 городах уже получили 284 312 клиентов при помощи DAROO. <a
+                            class='brief_button footer_brief' href='https://forms.amocrm.ru/vclcmx' target='_blank'>Получить клиентов</a>
+              </span>
+                </div>
+                <a class="get-clients" href="https://forms.amocrm.ru/vclcmx" target="_blank">Получить клиентов</a>
+                <a href="https://daroo.by/minsk/marriott">
+                    <img src="https://daroo.by/media/cache/supplier_footer_logo/images.daroo.gift/daroo.by/gallery/partnerlogo/5000877/2019/02/08/5c5d8cf4b08fd.jpg">
+                </a>
+                <a href="https://daroo.by/minsk/neurobox">
+                    <img src="https://daroo.by/media/cache/supplier_footer_logo/images.daroo.gift/daroo.by/gallery/partnerlogo/5000896/2019/04/03/5ca4a210e103d.jpg">
+                </a>
+                <a href="https://daroo.by/minsk/esquire">
+                    <img src="https://daroo.by/media/cache/supplier_footer_logo/images.daroo.gift/daroo.by/gallery/partnerlogo/5000876/2019/02/08/5c5d3fad3fafd.jpg">
+                </a>
+                <a href="https://daroo.by/minsk/teashop">
+                    <img src="https://daroo.by/media/cache/supplier_footer_logo/images.daroo.gift/daroo.by/gallery/partnerlogo/5000850/2019/01/09/5c35ca3e0ef77.jpg">
+                </a>
+                <a href="https://daroo.by/minsk/foxstudio">
+                    <img src="https://daroo.by/media/cache/supplier_footer_logo/images.daroo.gift/daroo.by/gallery/partnerlogo/5000804/2018/09/14/5b9b708f6fe98.jpg">
+                </a>
+                <a href="https://daroo.by/minsk/baunty">
+                    <img src="https://daroo.by/media/cache/supplier_footer_logo/images.daroo.gift/daroo.by/gallery/partnerlogo/5000831/2018/12/20/5c1b82f94acbb.jpg">
+                </a>
+                <a href="https://daroo.by/minsk/nemo">
+                    <img src="https://daroo.by/media/cache/supplier_footer_logo/images.daroo.gift/daroo.by/gallery/partnerlogo/996/2015/12/15/567005b367e33.jpg">
+                </a>
+            </div>
+        </div>
+        <div class="foot-cont">
+            <div class="col">
+                <div class="foot-pay">
+                    <p>Способы оплаты</p>
+                    <div>
+                        <img src="/images/payments_all_1.png?v=1" style="height: 30px;">
+                        <img src="/images/payments_all_3.png?v=1" style="height: 30px;">
+                    </div>
+                </div>
+                <div class="foot-copy">
+                    <p> © 2020 ООО "Гид Онлайн", Минск, ул. Могилевская 5-315 УНП: 193424595, выдано Минским
+                        горисполкомом </p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="foot-links">
+                    <ul>
+                        <li>
+                            <a href="https://daroo.by/o-servise" target="_blank"> О компании </a>
+                        </li>
+                        <li>
+                            <a href="https://daroo.by/corp" target="_blank"> Корпоративным клиентам </a>
+                        </li>
+                        <li>
+                            <a href="https://daroo.by/minsk/dostavka-i-oplata" target="_blank"> Доставка и оплата </a>
+                        </li>
+                        <li>
+                            <a href="https://dealer.daroo.by/" target="_blank"> Стать дилером </a>
+                        </li>
+                        <li>
+                            <a href="https://daroo.by/minsk/categories" target="_blank"> Подборки сертификатов </a>
+                        </li>
+                        <li>
+                            <a href="https://daroo.by/oplata-bankovskoj-kartoj" target="_blank"> Оплата картой </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="https://daroo.by/minsk/contacts" target="_blank"> Где купить </a>
+                        </li>
+                        <li>
+                            <a href="https://daroo.by/oferta" target="_blank"> Публичная оферта </a>
+                        </li>
+                        <li>
+                            <a href="https://forms.amocrm.ru/vclcmx" target="_blank"> Провайдерам услуг </a>
+                        </li>
+                        <li>
+                            <a href="https://daroo.by/minsk/categories-podarki" target="_blank"> Подборки подарков </a>
+                        </li>
+                        <li>
+                            <a href="https://daroo.by/minsk/podarki" target="_blank"> Купить подарок </a>
+                        </li>
+                        <li>
+                            <a href="https://daroo.by/refund" target="_blank"> Правила возврата </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="foot-drops">
+                    <div class="foot-drop">
+                        <p>Выберите страну</p>
+                        <div class="dropper">
+                            <div class="dropper-title"> Беларусь</div>
+                            <ul>
+                                <li class="active">
+                      <span>
+                        <a class="change-country" href="https://daroo.by"> Беларусь </a>
+                      </span>
+                                </li>
+                                <li>
+                      <span>
+                        <a class="change-country" href="https://daroo.ru"> Россия </a>
+                      </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="foot-drop">
+                        <p>Регион</p>
+                        <div class="dropper">
+                            <div class="dropper-title"> Минск</div>
+                            <ul>
+                                <li>
+                      <span>
+                        <a class="change-region" data-region-code="brest" href="#">Брест</a>
+                      </span>
+                                </li>
+                                <li>
+                      <span>
+                        <a class="change-region" data-region-code="vitebsk" href="#">Витебск</a>
+                      </span>
+                                </li>
+                                <li>
+                      <span>
+                        <a class="change-region" data-region-code="gomel" href="#">Гомель</a>
+                      </span>
+                                </li>
+                                <li>
+                      <span>
+                        <a class="change-region" data-region-code="grodno" href="#">Гродно</a>
+                      </span>
+                                </li>
+                                <li>
+                      <span>
+                        <a class="change-region" data-region-code="mogilev" href="#">Могилев</a>
+                      </span>
+                                </li>
+                                <li class="active">
+                                    <span> Минск </span>
+                                </li>
+                                <li>
+                      <span>
+                        <a class="change-region" data-region-code="polotsk" href="#">Полоцк и Новополоцк</a>
+                      </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot-big-links">
+                    <a class="change-device-view mobile" data-href="mobile">Мобильная версия</a>
+                    <a class="acivate" href="https://daroo.by/activate" target="_blank"> Активировать сертификат </a>
+                </div>
+                <div class="foot-social">
+                    <a href="https://fb.me/daroome" target="_blank">
+                        <img src="/img/footer/fb.svg">
+                    </a>
+                    <a href="https://vk.com/daroominsk" target="_blank">
+                        <img src="/img/footer/vk.svg">
+                    </a>
+                    <a href="https://instagram.com/daroo_minsk" target="_blank">
+                        <img src="/img/footer/in.svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+      $('.change-country').on('click', function (e) {
+        window.location.href = $(this).attr('href')
+      })
+      $('.change-region').on('click', function (e) {
+        var regionCode = $(this).attr('data-region-code')
+        var url = '/minsk/region/changeRegion'
+        var data = {
+          region_code: regionCode
+        }
+        Url.post(url, jQuery.param(data), function (response) {
+          if (response.status === 'ok') {
+            window.location.replace(response.reply)
+          }
+        })
+      })
+      $('.change-device-view').on('click', function (e) {
+        e.preventDefault()
+        var deviceViewCode = $(this).attr('data-href')
+        var url = '/minsk/changeDeviceView'
+        var data = {
+          device_view: deviceViewCode
+        }
+        Url.post(url, jQuery.param(data), function (response) {
+          if (response.status === 'ok') {
+            window.location.reload()
+          }
+        })
+        return false
+      })
+    </script>
+</div>
+<script>
+  $(document).ready(function () {
+    $('.order-btn').click(function () {
+      __AtmUrls = window.__AtmUrls || []
+      __AtmUrls.push('https://daroo.by/add-to-cart')
+    })
+    $('a.cart-btn').click(function () {
+      var self = $(this)
+      var product_url = self.next().attr('href') || null
+      if (null !== product_url) {
+        __AtmUrls = window.__AtmUrls || []
+        __AtmUrls.push('https://daroo.by/' + product_url)
+        __AtmUrls.push('https://daroo.by/add-to-cart')
+      }
+    })
+    setIframeInvisible()
+  })
+
+  function setIframeInvisible () {
+    var $frame = $('iframe[name=google_conversion_frame]')
+    $frame.css('width', '0px')
+    $frame.css('height', '0px')
+    $frame.css('display', 'none')
+  }
+</script>
+</body>
+</html>

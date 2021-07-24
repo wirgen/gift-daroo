@@ -1,0 +1,119 @@
+/*basket modal window*/
+.modal {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  -webkit-display: flex;
+  -o-display: flex;
+  -moz-display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+
+.modal_overlay {
+  z-index: 1;
+  background: rgba(0, 0, 0, .4);
+  position: absolute;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.modal_overlay, .modal {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modal_content {
+  z-index: 2;
+  max-width: 310px;
+  max-height: 400px;
+  width: 30%;
+  background: #fff;
+  padding: 20px 50px;
+  position: relative;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.modal_content span {
+  font-size: 1.1em;
+  font-family: Conv_segoeuib;
+  text-transform: uppercase;
+  color: #944575;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.modal p {
+  font-family: 'Conv_segoeuil';
+}
+
+.modal .formLine .inpText {
+  padding: 5px 0;
+  margin: 0;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.modal .formLine {
+  margin: 0px;
+}
+
+.modal .btn {
+  display: inline-block;
+  margin-top: 30px;
+  width: 100% !important;
+}
+
+.modal img {
+  padding: 0;
+  padding-top: 20px;
+}
+
+.unactive {
+  display: none;
+}
+
+img.closeModal {
+  display: block;
+  position: absolute;
+  padding: 10px;
+  width: 8px;
+  height: 8px;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+
+}
+
+
+#phone-confirm-error {
+  font-weight: bold;
+  margin: 0px auto;
+  text-align: center;
+  padding: 4px;
+  margin-bottom: 8px;
+}
+
+a.product-to-basket.disable, a.product-to-basket-ajax.disable {
+  cursor: default;
+  opacity: 0.5;
+}
+a.product-to-basket-ajax.disable:hover {
+  cursor: default;
+  background: none;
+  color: #944575 !important;
+  border: 1px solid #dec4d4 !important;
+}
+a.product-to-basket.disable:hover {
+  background-color: #944575 !important;
+}
+
+/*end basket modal window*/
