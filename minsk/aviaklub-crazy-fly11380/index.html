@@ -1,0 +1,2283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head itemscope itemtype="http://schema.org/WebSite">
+    <meta charset="utf-8">
+    <meta id="viewport" name="viewport"
+          content="width=device-width,initial-scale=0.59,maximum-scale=0.59,minimum-scale=0.59,user-scalable=no">
+    <title itemprop='name'>Обзорные полеты на самолете от авиаклуба Crazy Fly</title>
+    <meta name="description" content="Обзорные полеты на самолете от авиаклуба Crazy Fly">
+    <meta name="keywords" content="полет, полет на самолете, экстрим, романтическое приключение">
+    <meta property="og:type" content="website" />
+    <link href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=cyrillic"
+          rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&subset=cyrillic"
+          rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=cyrillic"
+          rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+      function getCookie (name) {
+        let value = `; ${document.cookie}`;
+        let parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+      }
+
+      var deviceView = getCookie('deviceView')
+      if (deviceView === 'desktop' || (deviceView === undefined && !("ontouchstart" in document.documentElement))) {
+        document.location.href = '/minsk/aviaklub-crazy-fly/'
+      }
+    </script>
+    <script type="text/javascript" src="/assets/js/mobile/full.js?v=1.1.6.0"></script>
+    <script type="text/javascript" src="/js/ladda/dist/spin.min.js"></script>
+    <script type="text/javascript" src="/js/ladda/dist/ladda.min.js"></script>
+    <script type="text/javascript" src="/js/front/mobile/swiper.min.js"></script>
+    <link type="text/css" rel="stylesheet" media="all" href="/assets/css/mobile/full.css?v=1.1.9.2" />
+    <script src="//apis.google.com/js/client.js"></script>
+    <script src="/js/routing.js?callback=fos.Router.setData"></script>
+    <script>
+      $(document).ready(function () {
+        $('textarea').on('touchend', function (e) {
+          $('head meta[name=viewport]').attr('content', 'width=device-width, minimum-scale=0.59, maximum-scale=0.59, initial-scale=0.59, user-scalable=no')
+          $(this).focus()
+          return false
+        })
+        /*
+                    $("input[type=number], input[type=text], textarea, select").on('touchend', function(e){
+                        $('head meta[name=viewport]').attr('content',"width=device-width, minimum-scale=0.59, maximum-scale=0.59, initial-scale=0.59, user-scalable=no");
+                        var input = $(this);
+                        $(this).focus();
+                        data = input.attr('value');
+                        if (data != undefined && data.length > 0) {
+                            alert(data.length);
+                            setCaretPosition(input, data.length);
+                        }
+
+                        return false;
+                    });
+        */
+        /*
+                    $("input[type=number], input[type=text], textarea, select").on('focus', function(e){
+                        $('head meta[name=viewport]').attr('content',"width=device-width, minimum-scale=0.59, maximum-scale=0.59, initial-scale=0.59, user-scalable=no");
+        //                return false;
+                    });
+                    $("input[type=number], input[type=text], textarea, select").on('click', function(e){
+                        $('head meta[name=viewport]').attr('content',"width=device-width, minimum-scale=0.59, maximum-scale=0.59, initial-scale=0.59, user-scalable=no");
+        //                return false;
+                    });
+        */
+        /* TODO Добавить правило на запрет масштабирования при изменении размера окна (повороте экрана) */
+        $(window).on('resize', function (e) {
+          $('head meta[name=viewport]').attr('content', 'width=device-width, minimum-scale=0.59, maximum-scale=0.59, initial-scale=0.59, user-scalable=no')
+          //                return false;
+        })
+
+        function setCaretPosition (ctrl, pos) {
+          // Modern browsers
+          if (ctrl.setSelectionRange) {
+            ctrl.focus()
+            ctrl.setSelectionRange(pos, pos)
+            // IE8 and below
+          } else if (ctrl.createTextRange) {
+            var range = ctrl.createTextRange()
+            range.collapse(true)
+            range.moveEnd('character', pos)
+            range.moveStart('character', pos)
+            range.select()
+          }
+        }
+      })
+      //          $.mobile.zoom.disable();
+      //        $('input').textinput({preventFocusZoom:false});
+    </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage"><span style="display: none;" id="zone-span" data-zone="by"
+                                                           data-is-mobile="1"></span>
+<div class="wrap">
+    <style>
+      .swiper-container.comment-gallery {
+        width: calc(100% - 20px);
+        overflow: visible;
+      }
+
+      .swiper-slide.comment-gallery__slide {
+        width: auto;
+      }
+
+      .comment-gallery__image {
+        height: 300px;
+      }
+    </style>
+    <script defer>
+      $(window).on('load', function () {
+        $('.swiper-container.comment-gallery').each(function () {
+          new Swiper($(this), {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+          })
+        })
+        $('.comments_photo_gallery').each(function () {
+          $(this).find('.swiper-slide a').simpleLightbox({
+            animationSpeed: 100,
+            widthRatio: 0.87,
+            heightRatio: 0.95,
+          })
+        })
+        //Настройка карусельки фотографий в комментарии
+      })
+    </script>
+    <style type="text/css">
+      /*    div.headRight div.user {
+    float: right;
+    width: 90px;
+    position: relative;
+    margin: 0 1px 0 0;
+    height: 90px;
+}
+div.headRight div.user a.userLink {
+    height: 90px;
+    display: block;
+    background: #a35f88;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    color: #944575;
+    z-index: 2;
+    position: relative;
+}
+div.headRight div.phone a.phoneLink:before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background: url(/img/design/mobile/header/new/question.png);
+    content: "";
+    margin: -19px 0 0 -19px;
+}
+div.headRight div.user.need-auth a:before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background: url(/img/design/mobile/header/new/key.png);
+    content: "";
+    margin: -19px 0 0 -19px;
+}
+a.userLink figure {
+    border-radius: 500px;
+    border: 1px solid #fff;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    position: relative;
+    top: 22.5px;
+    left: 22.5px;
+}*/
+    </style>
+    <header class="header">
+        <div class="menu">
+            <a href="" class="menuLink"></a>
+        </div>
+        <a href="https://daroo.by/" class="logo"></a>
+        <div class="headRight">
+            <div class="basket">
+                <a href="" class="basketLink"> <span id="cart-totalItems"></span> </a>
+            </div>
+            <div class="phone">
+                <a href="" class="phoneLink"></a>
+            </div>
+            <div class="user need-auth">
+                <a href="https://daroo.by/user/auth" class="userLink" id="authUserLink"></a>
+            </div>
+            <div class="searchButton">
+                <a href="#" class="searchLink"></a>
+            </div>
+        </div>
+        <div class="help-widget">
+            <div id="ue-embedded-widget"></div>
+        </div>
+    </header>
+    <section class="main-col">
+        <!-- LIST MENU START -->
+        <div class="container-list-menu">
+            <div class="list-menu-shadow-left"></div>
+            <div class="list-menu-shadow-right"></div>
+            <div class="list-menu">
+                <ul class="list-menu-scroll">
+                    <li><a href="https://daroo.by/life"> Журнал DAROO Life </a></li>
+                    <li>
+                        <a href="http://daroo.by/minsk/catalog?sortBy=new&amp;utm_source=menu&amp;utm_medium=url&amp;utm_campaign=new">
+                            Новинки </a></li>
+                    <li><a href="https://daroo.by/minsk/podarochnye-sertifikaty"> Подарочные сертификаты </a></li>
+                    <li><a href="https://daroo.by/minsk/podarochnye-nabory"> Наборы </a></li>
+                    <li><a href="https://daroo.by/minsk/sale"> Акции и скидки </a></li>
+                    <li>
+                        <a href="https://daroo.by/invitation?utm_source=banner-glavnaya&amp;utm_medium=cpc&amp;utm_campaign=banner-30%">
+                            Получить бонусы </a></li>
+                    <li><a href="https://corp.daroo.by/"> Корпоративные подарки </a></li>
+                    <li><a href="https://daroo.by/activate"> Активировать сертификат </a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- LIST MENU END -->
+        <!-- Search and filter buttons start -->
+        <!-- Search and filter buttons end -->
+        <script src="/js/Utils/Url.js"></script>
+        <script src="/js/Utils/Str.js"></script>
+        <script src="/js/daroo/product/Product.js?v=1.1.7"></script>
+        <script src="/js/Utils/php.js"></script>
+        <script>
+          $(function () {
+            new Product('price')
+            Product.set('rebasketUrl', '/minsk/cart/get/rebasket')
+            Product.initProduct()
+          })
+        </script>
+        <!-- detail -->
+        <div class="product-card" itemscope itemtype="http://schema.org/Product">
+            <!--  detail info  -->
+            <div class="company-box">
+                <figure>
+                    <a href="/minsk/aviaklub-crazy-fly11380/" class="title-link"> <img src="/images/5f4dfadbc398c.png"
+                                                                                       alt=""> </a>
+                </figure>
+                <p><a href="/minsk/aviaklub-crazy-fly11380/" class="title-link"> Авиаклуб Crazy Fly </a>
+                </p> <span> УНП 1923339491 ИП Корнович Олег Николаевич </span></div>
+            <h1 class="h2" itemprop="name">Почувствуй себя асом и соверши экстремальный прыжок над красотми белорусского
+                края или соверши безбашенный полет за штурвалом самолета</h1>
+            <meta itemprop="description" content="">
+            <!--  detail info  -->
+            <div class="detail-info1"> Рейтинг услуги
+                <div class="details-rating" itemprop="aggregateRating" itemscope
+                     itemtype="http://schema.org/AggregateRating">
+                    <meta itemprop="ratingValue" content="5">
+                    <meta itemprop="reviewCount" content="1">
+                    <span style="width:100%;"></span></div>
+                <span class="place">Минск</span></div>
+            <ul class="detail-info2">
+                <li class="detail-info-reviews" style="text-align: center"><a href="#"> 5 отзывов </a></li>
+            </ul>
+            <!-- // detail info  -->
+            <script>
+              $(document).ready(function () {
+                $('.play').attr('rel', 'media-gallery').fancybox({
+                  openEffect: 'none',
+                  closeEffect: 'none',
+                  prevEffect: 'none',
+                  nextEffect: 'none',
+                  arrows: false,
+                  helpers: {
+                    media: {},
+                    buttons: {}
+                  }
+                })
+              })
+            </script>
+            <!--  slider details  -->
+            <div class="slider-details-holder">
+                <ul class="details-slider detail-slider">
+                    <li itemscope itemtype="http://schema.org/ImageObject" itemprop="image"><img
+                            src="https://daroo.by/media/cache/original_image/images.daroo.gift/daroo.by/gallery/productbanner/5003233/2020/09/01/5f4e08f0ed6c5.jpg"
+                            alt="Почувствуй себя пилотом и насладись красотой белорусского края" itemprop="contentUrl">
+                        <div class="slider-desc">
+                            <p itemprop="description">Вы поклонник острых ощущений? Мечтаете
+                                подняться в небо и не только? Стоит оторваться от земли и
+                                организовать не забываемый полет, чтобы осуществить свою мечту.
+                                Отдохните от повседневной жизни и убедитесь, что мир выглядит
+                                совершенно иначе, чем прежде. Море адреналина, море впечатлений и
+                                потрясающий полет над красотами родного края гарантированы!</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- // slider details  -->
+            <!-- map popup -->
+            <div class="popupMap-2">
+                <div class="popup-header"><a href="#" class="back">Назад</a></div>
+                <div class="map" id="price-map" style="width: auto; height:1200px;"></div>
+            </div>
+            <!-- // map popup -->
+            <div class="product-card-content" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+                <meta itemprop="lowPrice" content="140.00">
+                <meta itemprop="highPrice" content="550.00">
+                <meta itemprop="offerCount" content="15">
+                <meta itemprop="priceCurrency" content="BYN">
+                <div class="row" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <p class="title" itemprop="description">Супер экстремал. 500 метров над землей в полном одиночестве.
+                        Свободный полет в прохладную воду в жаркий день.</p>
+                    <span class="meta-link" itemprop="seller" itemscope itemtype="http://schema.org/Organization">
+                <meta itemprop="name" content="Авиаклуб Crazy Fly">
+                <link itemprop="url" content="/minsk/aviaklub-crazy-fly11380/" href="/minsk/aviaklub-crazy-fly11380/">
+              </span>
+                    <p class="price"><span class="discount"> -4% </span> <span class="price-old">
+                  <em> 1145.83 руб. </em>
+                </span> <span> 1100.00 руб.
+                  <meta itemprop="price" content="1100.00">
+                  <meta itemprop="priceCurrency" content="BYN">
+                </span></p>
+                    <p class="note">Гарантия качества: В случае неудачного приземления мы вернем Вам всю потраченную
+                        сумму!</p>
+                    <p class='note'>Осталось: <em>13 дней 13 часов</em></p>
+                    <a href="#" class="btn-2" id="booking-btn"
+                       data-id="5026063" data-price="220.00"
+                       data-name="Почувствуй себя пилотом и насладись красотой белорусского края"
+                       data-usage-condition="Супер экстремал"
+                       data-supplier="Авиаклуб Crazy Fly">
+                        Записаться на услугу </a>
+                    <br> <a href="#" class="btn-2 order-btn" data-mobile="1">
+                    Купить сертификат </a></div>
+                <div class="row" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <p class="title" itemprop="description"> Русская рулетка. Выбери себе парашют и убедись,
+                        что он рабочий во время прыжка. </p>
+                    <span class="meta-link" itemprop="seller" itemscope itemtype="http://schema.org/Organization">
+                <meta itemprop="name" content="Авиаклуб Crazy Fly">
+                <link itemprop="url" content="/minsk/aviaklub-crazy-fly11380/" href="/minsk/aviaklub-crazy-fly11380/">
+              </span>
+                    <p class="price"><span class="discount"> -11% </span> <span class="price-old">
+                  <em> 2247.19 руб. </em>
+                </span> <span> 2000.00 руб.
+                  <meta itemprop="price" content="2000.00">
+                  <meta itemprop="priceCurrency" content="BYN">
+                </span></p>
+                    <p class="note"> Длительность прыжка: 3-15 мин (в зависимости от парашюта) </p>
+                    <p class='note'>Осталось: <em> 11 дней 13 часов</em></p>
+                    <a href="#" class="btn-2" id="booking-btn"
+                       data-id="5026062" data-price="2000.00"
+                       data-name="Почувствуй себя пилотом и насладись красотой белорусского края"
+                       data-usage-condition="Русская рулетка"
+                       data-supplier="Авиаклуб Crazy Fly">
+                        Записаться на услугу </a>
+                    <br> <a href="#" class="btn-2 order-btn" data-mobile="1">
+                    Купить
+                    сертификат </a></div>
+                <div class="row" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <p class="title" itemprop="description"> Я в себя верю. 60 минутный полет в гордом
+                        одиночестве. Вы за штурвалом, пилот на радиосвязи. </p>
+                    <span class="meta-link" itemprop="seller" itemscope itemtype="http://schema.org/Organization">
+                <meta itemprop="name" content="Авиаклуб Crazy Fly">
+                <link itemprop="url" content="/minsk/aviaklub-crazy-fly11380/"
+                      href="/minsk/aviaklub-crazy-fly11380/">
+              </span>
+                    <p class="price"> 2500.00 руб.
+                        <meta itemprop="price" content="2500.00">
+                        <meta itemprop="priceCurrency" content="BYN">
+                    </p>
+                    <p class="note"> Длительность полета: зависит от Вас, максимум 60 мин. </p>
+                    <a href="#" class="btn-2" id="booking-btn"
+                       data-id="5025454" data-price="2500.00"
+                       data-name="Почувствуй себя пилотом и насладись красотой белорусского края"
+                       data-usage-condition="Я в себя верю"
+                       data-supplier="Авиаклуб Crazy Fly">
+                        Записаться на услугу </a>
+                    <br> <a href="#" class="btn-2 order-btn" data-mobile="1">
+                    Купить
+                    сертификат </a></div>
+            </div>
+            <div class="show-all"><a href="#" class="btn">Посмотреть все цены</a></div>
+            <div class="detail-content">
+                <div class="full-desc">
+                    <div class="desc">
+                        <h2>Подробная информация</h2></div>
+                    <ul class="detail-list">
+                        <li>
+                            <figure><img src="/img/editor/daroo.by/2020/09/01/5f4e06adb2e93.png"></figure>
+                            <div class="article">
+                                <div>
+                                    <h3>Супер экстремал!</h3> Прыжок без парашюта – это увлекательный полет
+                                    и море адреналина. Вы поднимаетесь на высоту 500 метров с пилотом и
+                                    после мы Вас катапультируем над большим озером. После приземления на
+                                    воду Вас встретит наш катер с опытной командой. Этот не забываемый
+                                    прыжок заказали уже сотни человек!
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="article">
+                                <div>
+                                    <h3>Русская рулетка</h3> Вы никогда не совершали ничего по-настоящему
+                                    безбашенного? Значит эта услуга подходит именно ВАМ! Таких эмоций Вы не
+                                    испытывали и не испытаете больше никогда. Перед вылетом ВЫ САМИ
+                                    ВЫБИРАЕТЕ СЕБЕ ПАРАШЮТ, НО!!! Один из них не раскроется в полете что бы
+                                    Вы ни делали. У Вас есть один шанс из шести испытать абсолютно свободный
+                                    полет с высоты 700 метров на мягкие стога сена в открытом поле.
+                                </div>
+                            </div>
+                            <figure><img src="/img/editor/daroo.by/2020/09/01/5f4e06e743ada.png"></figure>
+                        </li>
+                        <li>
+                            <figure><img src="/img/editor/daroo.by/2020/09/01/5f4e06f645234.png"></figure>
+                            <div class="article">
+                                <div>
+                                    <h3>Я в себя верю</h3> Одиночный полет на самолете даст возможность не
+                                    только полетать и сделать красивые фотографии, но и узнать больше о
+                                    самолётах, понять, как они летают, получить ответы на интересующие вас
+                                    вопросы по радиосвязи от опытного пилота-инструктора и попробовать себя
+                                    в роли самостоятельного пилота.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="detail-desc-features clear">
+                    <h2>Преимущества воздушных экскурсий от Crazy Fly</h2>
+                    <ul>
+                        <li>
+                            <figure><img src="/img/editor/daroo.by/2017/10/18/59e74cf3012e3.jpg">
+                                <br>
+                            </figure>
+                            <h3>Безопасность и комфорт<br></h3></li>
+                        <li>
+                            <figure><img src="/img/editor/daroo.by/2017/10/18/59e74d00eb93d.jpg">
+                                <br>
+                            </figure>
+                            <h3>Возможность выбрать маршрут<br></h3></li>
+                        <li>
+                            <figure><img src="/img/editor/daroo.by/2017/10/18/59e74d634c9f1.jpg">
+                                <br>
+                            </figure>
+                            <h3>Ваша жизнь с нового ракурса<br></h3></li>
+                    </ul>
+                </div>
+                <p></p>
+                <div class="full-desc">
+                    <div class="desc">
+                        <p>Воплощайте мечты в реальность, стремитесь выше — приобретайте сертификаты на воздушные полеты
+                            и прыжки с/без парашюта для себя и близких, которым всегда хотелось испытать что-то
+                            по-настоящему новое!
+                            <br>
+                            <br>
+                            <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="detail-faq-block infoscroll-content">
+                    <div class="row">
+                        <div class="col">
+                            <dl>
+                                <dt>
+                                    <figure><img src="/img/design/desktop/faq-img-01.png" alt="Портфель"></figure>
+                                </dt>
+                                <dd>
+                                    <div class="desc">
+                                        <h3>Что взять с собой?</h3>
+                                        <p>Подарочный сертификат.</p>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col">
+                            <dl>
+                                <dt>
+                                    <figure><img src="/img/design/desktop/faq-img-06.png" alt="Рукопожатие"></figure>
+                                </dt>
+                                <dd>
+                                    <div class="desc">
+                                        <h3>С кем пойти?</h3>
+                                        <p>С компанией до 3 человек.</p>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <dl>
+                                <dt>
+                                    <figure><img src="/img/design/desktop/faq-img-02.png" alt="Календарь"></figure>
+                                </dt>
+                                <dd>
+                                    <div class="desc">
+                                        <h3>Сезон</h3>
+                                        <p>Полеты проводятся только при благоприятных погодных условиях.</p>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col">
+                            <dl>
+                                <dt>
+                                    <figure><img src="/img/design/desktop/faq-img-03.png" alt="Настенные часы"></figure>
+                                </dt>
+                                <dd>
+                                    <div class="desc">
+                                        <h3>Расписание и время</h3>
+                                        <p>Ежедневно с 10:00 до 20:00. По предварительной записи.</p>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <dl>
+                                <dt>
+                                    <figure><img src="/img/design/desktop/faq-img-09.png" alt="Горячая кружка"></figure>
+                                </dt>
+                                <dd>
+                                    <div class="desc">
+                                        <h3>Дополнительные возможности</h3>
+                                        <p>По предварительному согласованию возможно согласовать другой тип услуги</p>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                  $(document).ready(function () {
+                    $('ul.detail-list > li').each(function () {
+                      var $first = $(this).children().eq(0)
+                      var $elName = $first[0].nodeName
+                      var $second = $(this).children().eq(1)
+                      var $secElName = $second[0].nodeName
+                      if ($secElName === 'FIGURE' && $elName === 'DIV') {
+                        console.log(true)
+                        $(this).html('')
+                        $(this).append($second.html())
+                        $(this).append($first.html())
+                      }
+                    })
+                  })
+                </script>
+            </div>
+            <style type="text/css">
+              div.order-block figure {
+                position: relative;
+                height: 113px;
+              }
+
+              div.order-block figure img {
+                width: initial !important;
+                position: absolute;
+                left: calc(50% - 60px);
+              }
+            </style>
+            <!-- // detail content -->
+            <div class="detail-map">
+                <p class="h2">Куда ехать</p>
+                <div class="map-container">
+                    <div id="map" style="width: 100%; height: 100%;"></div>
+                    <script>
+                      var markers = []
+                      var markerCluster
+                      var map
+                      $(document).ready(function () {
+                        initMap1()
+
+                        function initMap1 () {
+                          var center = {
+                            lat: parseFloat('54.261756'),
+                            lng: parseFloat('26.857588')
+                          }
+                          map = L.map('map', {
+                            zoomControl: false,
+                            attributionControl: false,
+                            dragging: false,
+                            maxZoom: 17,
+                            minZoom: 6
+                          })
+                          map.setView([center.lat, center.lng], 19)
+                          L.control.attribution({
+                            prefix: ''
+                          }).addAttribution('<a href="http://maps.sputnik.ru/">Спутник</a> &copy; OpenStreetMap').addTo(map)
+                          L.control.zoom({
+                            position: 'bottomleft'
+                          }).addTo(map)
+                          var domainOrigin = window.location.origin
+                          L.tileLayer('https://daroo.by/tiles/{z}/{x}/{y}.png', {
+                            maxZoom: 19,
+                            minZoom: 1
+                          }).addTo(map)
+                          bounds = []
+                          markers = L.markerClusterGroup({
+                            //                    singleMarkerMode: true,
+                            chunkedLoading: true,
+                            spiderfyOnMaxZoom: false,
+                            spiderfyDistanceMultiplier: 3,
+                            showCoverageOnHover: false,
+                            zoomToBoundsOnClick: false,
+                          })
+                          var infoWindowContent = ['<div class=\'ym-single-balloon-div\'>', '<div class=\'caption\'>', '$[properties.clusterCaption]', '</div>', '<div class=entry>', '<div class="bold ym-header-div">$[properties.balloonContentHeader]</div>', '<div>$[properties.balloonContentBody]</div>', '<div class="author ym-footer-div ym-single-footer">$[properties.balloonContentFooter]</div>', '</div>', '</div>'].join('')
+                          var custIcon = L.icon({
+                            iconUrl: '/img/bullet.png',
+                            iconSize: [41, 39], // size of the icon
+                            //                    iconSize:     [38, 95], // size of the icon
+                            //                    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+                            iconAnchor: [19, 38], // point of the icon which will correspond to marker's location
+                            popupAnchor: [-3, -21] // point from which the popup should open relative to the iconAnchor
+                          })
+                          var curContact = {}
+                          var curContent = infoWindowContent
+                          var curCoords = {
+                            lat: parseFloat('54.261756'),
+                            lng: parseFloat('26.857588')
+                          }
+                          curContent = curContent.replace('$[properties.clusterCaption]', '<div class=\'gm-caption-div\'><img src=\'https://daroo.by/media/cache/supplier/http---images.daroo.gift/nonoimage.png\' /><span><span class=\'gm-price-span\'><span class=\'gm-price\'>160.00</span><span class=\'currency\'>руб.</span></span></span></div>'.replace(/([\"])/g, '\x22'))
+                          curContent = curContent.replace('$[properties.balloonContentHeader]', '<span class=\'gm-supplier-name\'></span>'.replace(/([\"])/g, '\x22'))
+                          curContent = curContent.replace('$[properties.balloonContentBody]', '<span class=\'ym-body-span\'><span>Light fly. Обзорный полёт 15 мин. для 1-3 человек</span></span>'.replace(/([\"])/g, '\x22'))
+                          curContent = curContent.replace('$[properties.balloonContentFooter]', '<span class=\'gm-footer-span\'><span><b>Адрес</b>: Молодечненский район, д. Мойсичи (аэродром по согласованию)</span><br /><span><b>Время работы</b>:ежедневно с 10:00 до 20:00</span></span><br /><div class=\'gm-footer-btn\'><a class=\'btn\' href=\'polet-na-samolete11380\'>Выбрать</a></div>'.replace(/([\"])/g, '\x22'))
+                          curContact.latitude = curCoords.lat
+                          curContact.longitude = curCoords.lng
+                          curContact.caption = '<div class=\'gm-caption-div\'><img src=\'https://daroo.by/media/cache/supplier/http---images.daroo.gift/nonoimage.png\' /><span><span class=\'gm-price-span\'><span class=\'gm-price\'>160.00</span><span class=\'currency\'>руб.</span></span></span></div>'.replace(/([\"])/g, '\x22')
+                          curContact.header = '<span class=\'gm-supplier-name\'></span>'.replace(/([\"])/g, '\x22')
+                          curContact.body = '<span class=\'ym-body-span\'><span>Light fly. Обзорный полёт 15 мин. для 1-3 человек</span></span>'.replace(/([\"])/g, '\x22')
+                          curContact.footer = '<span class=\'gm-footer-span\'><span><b>Адрес</b>: Молодечненский район, д. Мойсичи (аэродром по согласованию)</span><br /><span><b>Время работы</b>:ежедневно с 10:00 до 20:00</span></span><br /><div class=\'gm-footer-btn\'><a class=\'btn\' href=\'polet-na-samolete11380\'>Выбрать</a></div>'.replace(/([\"])/g, '\x22')
+                          var markerLocation = new L.LatLng(curCoords.lat, curCoords.lng)
+                          var marker = new L.Marker(markerLocation, {
+                            title: '',
+                            data: curContact,
+                            icon: custIcon
+                          })
+                          //                marker.bindPopup(curContent);
+                          markers.addLayer(marker)
+                          bounds.push([curCoords.lat, curCoords.lng])
+                          markers.on('clusterclick', function (a) {
+                            cluster = a.layer
+                            clusterMarkers = a.layer.getAllChildMarkers()
+                            markersLength = clusterMarkers.length
+                            a = 0
+                            firstData = clusterMarkers[0].options.data
+                            firstLong = firstData.longitude
+                            firstLat = firstData.latitude
+                            markerContent = ''
+                            var contentItemMarkup = ['<div class=entry>', '<div class="bold gm-header-div">$[properties.balloonContentHeader]</div>', '<div class="gm-body-div">$[properties.balloonContentBody]</div>', '<div class="author gm-footer-div">$[properties.balloonContentFooter]</div>', '</div>'].join('')
+                            var accordion = '<div class=map-accordion>'
+                            for ($i = 0; $i < markersLength; $i++) {
+                              if (clusterMarkers[$i].options.data.longitude == firstLong && clusterMarkers[$i].options.data.latitude == firstLat) {
+                                a = a + 1
+                              }
+                              var curInfo = clusterMarkers[$i].options.data
+                              var $curMarkup = contentItemMarkup
+                              $curMarkup = $curMarkup.replace('$[properties.balloonContentHeader]', curInfo.header)
+                              $curMarkup = $curMarkup.replace('$[properties.balloonContentBody]', curInfo.body)
+                              $curMarkup = $curMarkup.replace('$[properties.balloonContentFooter]', curInfo.footer)
+                              accordion += '<div class=map-accordion-item>' + '<div class=map-accordion-item-title>' + curInfo.caption + '</div>' + '<div class=map-accordion-item-content>' + $curMarkup + '</div>' + '</div>'
+                            }
+                            accordion += '</div>'
+                            if (a == markersLength) {
+                              cluster.bindPopup(accordion).openPopup()
+                            } else {
+                              cluster.zoomToBounds({
+                                padding: [100, 100]
+                              })
+                            }
+                            return false
+                          })
+                          map.addLayer(markers)
+                          map.fitBounds(bounds)
+                          return false
+                        }
+
+                        $('.product-maplink').bind('click', function (e) {})
+                        $('.maplink').click(function () {
+                          $('html, body').animate({
+                            scrollTop: $('#map').offset().top - 150
+                          }, 800)
+                        })
+                      })
+                    </script>
+                </div>
+            </div>
+            <!-- // detail -->
+    </section>
+    <footer class="footer">
+        <a class="circle" href="https://forms.amocrm.ru/vclcmx" target="_blank"></a>
+        <div class="add-partner">
+            <p class="title">Присоединяйтесь</p>
+            <p class="descr">1 470 компаний в 13 городах уже получили 284 395 клиентов при помощи DAROO.</p><a
+                class="btn" href="https://forms.amocrm.ru/vclcmx" target="_blank">Получить клиентов</a></div>
+        <ul class="fmenu">
+            <li class="m1"><a target="_blank" href="https://daroo.by/o-servise"> О компании </a></li>
+            <li class="m2"><a target="_blank" href="/minsk/contacts"> Где купить </a></li>
+            <li class="m3"><a target="_blank" href="/corp"> Корпоративным клиентам </a></li>
+            <li class="m4"><a target="_blank" href="https://daroo.by/oferta"> Публичная оферта </a></li>
+            <li class="m5"><a target="_blank" href="/minsk/dostavka-i-oplata"> Доставка и оплата </a></li>
+            <li class="m6"><a target="_blank" href="https://forms.amocrm.ru/vclcmx"> Провайдерам услуг </a></li>
+            <li class="m7"><a target="_blank" href="https://dealer.daroo.by/"> Стать дилером </a></li>
+            <li class="m8"><a target="_blank" href="https://daroo.by/minsk/categories"> Подборки сертификатов </a></li>
+            <li class="m9"><a target="_blank" href="https://daroo.by/minsk/categories-podarki"> Подборки подарков </a>
+            </li>
+            <li class="m10"><a target="_blank" href="https://daroo.by/minsk/podarki"> Купить подарок </a></li>
+            <li class="m"><a target="_blank" href="https://daroo.by/activate"> Активировать сертификат </a></li>
+        </ul>
+        <div class="choose">
+            <div class="chooseTitle"><span><img src="/img/flags/by.png" alt=""> Беларусь </span></div>
+            <ul>
+                <li><span><a href="http://daroo.ua"><img src="/img/flags/ua.png" alt="">Украина </a></span></li>
+                <li class="active"><span><a href="http://daroo.by"><img src="/img/flags/by.png"
+                                                                        alt="">Беларусь </a></span></li>
+                <li><span><a href="http://daroo.ru"><img src="/img/flags/ru.png" alt="">Россия </a></span></li>
+            </ul>
+        </div>
+        <div class="choose region">
+            <div class="chooseTitle"><span>Минск</span></div>
+            <ul>
+                <li class="change-region" data-region-code="brest"><span>Брест</span></li>
+                <li class="change-region" data-region-code="vitebsk"><span>Витебск</span></li>
+                <li class="change-region" data-region-code="gomel"><span>Гомель</span></li>
+                <li class="change-region" data-region-code="grodno"><span>Гродно</span></li>
+                <li class="change-region" data-region-code="mogilev"><span>Могилев</span></li>
+                <li class="active"><span>Минск</span></li>
+                <li class="change-region" data-region-code="polotsk"><span>Полоцк и Новополоцк</span></li>
+            </ul>
+        </div>
+        <script>
+          $('.change-region').on('click', function (e) {
+            e.preventDefault()
+            var regionCode = $(this).attr('data-region-code')
+            var url = '/minsk/region/changeRegion'
+            var data = {
+              region_code: regionCode
+            }
+            Url.post(url, jQuery.param(data), function (response) {
+              if (response.status === 'ok') {
+                window.location.replace(response.reply)
+              }
+            })
+            return false
+          })
+        </script>
+        <style>
+          .footer .language ul {
+            text-align: center;
+          }
+
+          .footer .language p {
+            margin: 0 0 13px;
+          }
+
+          .footer .language {
+            margin: 0 0 38px;
+          }
+
+          .footer .language ul li {
+            display: inline-block;
+            margin: 0 12px;
+          }
+
+          .footer .language ul li a:hover,
+          .footer .language ul .active a {
+            color: #fdae2f;
+          }
+
+          .footer .language ul li a {
+            font-size: 25px;
+          }
+        </style>
+        <div class="foot-social">
+            <a target="_blank" href="https://fb.me/daroome"><img src="/img/footer/fb.svg"></a>
+            <a target="_blank" href="https://vk.com/daroominsk"><img src="/img/footer/vk.svg"></a>
+            <a target="_blank" href="https://instagram.com/daroo_minsk"><img src="/img/footer/in.svg"></a>
+        </div>
+        <div class="pay"> Способы оплаты
+            <ul>
+                <li><img src="/images/payments_all_1.png?v=1" alt=""></li>
+                <li><img src="/images/payments_all_3.png?v=1" alt=""></li>
+            </ul>
+        </div>
+        <div class="copy"> © 2020 ООО "Гид Онлайн"
+            <br> Минск, ул. Могилевская 5-315 УНП: 193424595, выдано Минским горисполкомом
+        </div>
+        <div class="site-version"><a href="/minsk/aviaklub-crazy-fly/" class="change-device-view" data-href="desktop">Полная версия сайта</a></div>
+        <script>
+          $('.change-device-view').on('click', function (e) {
+            e.preventDefault()
+            document.cookie = `deviceView=${$(this).attr('data-href')}; path=/;`;
+            document.location.href = '/minsk/aviaklub-crazy-fly/'
+            return false
+          })
+        </script>
+    </footer>
+    <div class="popupMap">
+        <div class="popup-header"><a href="#" class="back">Назад</a></div>
+        <div class="popup-content">
+            <div class="tabs-cabinet">
+                <ul class="tabs-cabinet-nav">
+                    <li><a href="#tabs-1">Контакты</a></li>
+                    <li><a href="#tabs-2">На карте</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <div class="col">
+                        <h3>Поставщик услуги</h3>
+                        <p id="map-providerName"></p>
+                        <p></p>
+                    </div>
+                    <address class="col" id="address-col"><h3>Адрес</h3>
+                        <p id="map-providerCity"></p>
+                        <p id="map-providerAddress"></p>
+                        <p id="map-providerWH"></p></address>
+                    <div class="col" id="phone-col">
+                        <h3>Контактные данные</h3>
+                        <p id="map-providerPhone"></p>
+                    </div>
+                    <div class="col" id="email-col">
+                        <p>
+                            <a href="mailto:" id="map-providerEmail"></a>
+                        </p>
+                        <p>
+                            <a href="#" id="map-providerSite"></a>
+                        </p>
+                    </div>
+                </div>
+                <div id="tabs-2">
+                    <div class="map" id="popup-map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popupPhones">
+        <div class="popupNav"><a href="" class="back">Назад</a></div>
+        <div class="phoneInfo" style="margin-top: 40px;"></div>
+        <style>
+          .phoneCont dl {
+            padding-bottom: 0px;
+          }
+        </style>
+        <div class="phoneCont">
+            <div style="font-size: 25px; margin-bottom: 25px;"><a href="mailto:support@daroo.by"><strong>support@daroo.by</strong></a>
+            </div>
+            <a class="where" href="https://daroo.by/minsk/contacts">Где купить?</a></div>
+    </div>
+    <style type="text/css">
+      div.help-widget {
+        display: none;
+        position: relative;
+      }
+
+      div.help-widget.active {
+        left: -18%;
+        max-height: 300px;
+      }
+
+      div.help-widget div#ue-embedded-widget {
+        position: absolute;
+        max-width: 540px;
+        width: auto;
+        max-height: 300px;
+        height: auto;
+        top: 150px;
+        left: 35%;
+      }
+
+      div#ue-embedded-widget iframe {
+        margin-left: -50px;
+        background-color: white !important;
+        border-radius: 8px;
+        width: 510px !important;
+        /*height: 600px !important;*/
+      }
+    </style>
+    <script type='text/javascript'>
+      var _ues = {
+        host: 'support.daroo.by',
+        forum: '3',
+        lang: 'en',
+        tab_show: true,
+        container_id: 'ue-embedded-widget',
+      }
+      $(document).ready(function () {
+        $('a.support-btn').on('click', function (e) {
+          e.preventDefault()
+          if ($('div.help-widget #ue-embedded-widget iframe').length == 0) {
+            (function () {
+              var _ue = document.createElement('script')
+              _ue.type = 'text/javascript'
+              _ue.async = true
+              //                _ue.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.userecho.com/js/widget-1.4.gz.js';
+              _ue.src = '/userecho/widget-1.4.gz.js'
+              var s = document.getElementsByTagName('script')[0]
+              s.parentNode.insertBefore(_ue, s)
+            })()
+          }
+          var $widget = $('div.help-widget')
+          if (!$widget.hasClass('active')) {
+            //                    $(".phoneCont").stop().slideToggle(150);
+            //                    $(".phoneCont").parent('.help.help-header').toggleClass('active');
+            $('.popupPhones a.back').trigger('click')
+            $widget.addClass('active')
+            $widget.show()
+          } else {
+            $widget.removeClass('active')
+            $widget.hide()
+          }
+        })
+      })
+      var messageListener = function (e) {
+        if (e.origin !== 'https://support.daroo.by' && e.origin !== 'http://support.daroo.by' && e.origin !== 'http://daroo.local' && e.origin !== 'https://daroo.by') {
+          return
+        }
+        //            console.log(e.data);
+        if (e.data == 'ue_widget_hide' || (typeof e.data === typeof [] && e.data[0] == 'ue_widget_hide')) {
+          var $widget = $('div.help-widget')
+          $widget.removeClass('active')
+          $widget.hide()
+        }
+        if (typeof e.data === typeof [] && e.data[0] === 'ue_widget_change_height') {
+          var $widget = $('div.help-widget')
+          $widget.find('iframe').style('height', e.data[1] + 'px', 'important')
+        }
+      }
+      if (window.addEventListener) {
+        window.addEventListener('message', messageListener, false)
+      } else if (window.attachEvent) {
+        window.attachEvent('onmessage', messageListener)
+      }
+      (function ($) {
+        if ($.fn.style) {
+          return
+        }
+        // Escape regex chars with \
+        var escape = function (text) {
+          return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
+        }
+        // For those who need them (< IE 9), add support for CSS functions
+        var isStyleFuncSupported = !!CSSStyleDeclaration.prototype.getPropertyValue
+        if (!isStyleFuncSupported) {
+          CSSStyleDeclaration.prototype.getPropertyValue = function (a) {
+            return this.getAttribute(a)
+          }
+          CSSStyleDeclaration.prototype.setProperty = function (styleName, value, priority) {
+            this.setAttribute(styleName, value)
+            var priority = typeof priority != 'undefined' ? priority : ''
+            console.log(priority)
+            if (priority != '') {
+              // Add priority manually
+              var rule = new RegExp(escape(styleName) + '\\s*:\\s*' + escape(value) + '(\\s*;)?', 'gmi')
+              this.cssText = this.cssText.replace(rule, styleName + ': ' + value + ' !' + priority + ';')
+            }
+          }
+          CSSStyleDeclaration.prototype.removeProperty = function (a) {
+            return this.removeAttribute(a)
+          }
+          CSSStyleDeclaration.prototype.getPropertyPriority = function (styleName) {
+            var rule = new RegExp(escape(styleName) + '\\s*:\\s*[^\\s]*\\s*!important(\\s*;)?', 'gmi')
+            return rule.test(this.cssText) ? 'important' : ''
+          }
+        }
+        // The style function
+        $.fn.style = function (styleName, value, priority) {
+          // DOM node
+          var node = this.get(0)
+          // Ensure we have a DOM node
+          if (typeof node == 'undefined') {
+            return this
+          }
+          // CSSStyleDeclaration
+          var style = this.get(0).style
+          // Getter/Setter
+          if (typeof styleName != 'undefined') {
+            if (typeof value != 'undefined') {
+              // Set style property
+              priority = typeof priority != 'undefined' ? priority : ''
+              style.setProperty(styleName, value, priority)
+              return this
+            } else {
+              // Get style property
+              return style.getPropertyValue(styleName)
+            }
+          } else {
+            // Get CSSStyleDeclaration
+            return style
+          }
+        }
+      })(jQuery)
+      /*
+              var _ues = {
+                  host:'support.daroo.by',
+                  forum:'3',
+                  lang:'en',
+                  tab_show:true,
+                  container_id:'ue-embedded-widget',
+              };
+
+              (function() {
+                  var _ue = document.createElement('script'); _ue.type = 'text/javascript'; _ue.async = true;
+      //                _ue.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.userecho.com/js/widget-1.4.gz.js';
+                  _ue.src = '/userecho/widget-1.4.gz.js';
+                  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(_ue, s);
+              })();
+      */
+    </script>
+    <style type="text/css">
+      div.popupUser {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        overflow-y: auto;
+        background: #fff;
+        height: 100vh;
+        width: 100%;
+        z-index: 899;
+        text-align: center;
+      }
+
+      div.popupUser div.userInfo {
+        font-size: 25px;
+        line-height: 25px;
+        padding: 130px 20px 40px;
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+        margin-bottom: 14px;
+        color: #787878;
+        height: 64.9vh;
+      }
+
+      div.popupUser div.userInfo a {
+        display: block;
+        margin-bottom: 45px;
+      }
+
+      div.popupUser div.userCont {
+        overflow: hidden;
+        zoom: 1;
+        border-radius: 0 0 5px 5px;
+        padding: 13px 0;
+        background-color: #f3f3f3;
+        /*height: 100%;*/
+        font-size: 23px;
+        color: #944575
+      }
+
+      div.popupUser div.userCont span.info {
+        display: block;
+        margin-bottom: 25px;
+      }
+
+      div.popupUser div.userCont span.info span.sum {
+        font-weight: bold;
+      }
+
+      div.phoneInfo a.btn.support-btn {
+        width: 100%;
+        font-size: 18px;
+        padding: 10px;
+      }
+      /*
+    div.popupPhones {
+        padding-right: 10px;
+    }
+  */
+
+      .phoneCont dl dt {
+        color: #8с8с8с;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        /*
+                $(".userLink").click(function(){
+                    alert("1111");
+                    $(".popupUser").stop().velocity({right:0},150, "linear");
+                    $('body').css('overflow-y', 'hidden');
+                    $('body').css('position', 'fixed');
+                    return false
+                });
+        */
+      })
+    </script>
+    <div class="popupAuthUser"></div>
+    <!-- SEARCH POPUP -->
+    <div class="popupSearch">
+        <div class="popupNav"><a href="#" class="back">Назад</a></div>
+        <link class="meta-link" itemprop="url" href="https://daroo.by/" content="https://daroo.by/" />
+        <form action="/minsk/search" method="GET" itemprop="potentialAction" itemscope
+              itemtype="http://schema.org/SearchAction">
+            <div class="inputCont">
+                <div class="dropdown-op">
+                    <input class="dropdown-op-input" type="hidden" name="search-region" value="">
+                    <div class="choose-op"><span>Выбрать регион</span></div>
+                    <ul>
+                        <li class="search-region active" data-region-code=""><span>Выбрать регион</span></li>
+                        <li class="search-region " data-region-code="brest"><span>Брест</span></li>
+                        <li class="search-region " data-region-code="vitebsk"><span>Витебск</span></li>
+                        <li class="search-region " data-region-code="gomel"><span>Гомель</span></li>
+                        <li class="search-region " data-region-code="grodno"><span>Гродно</span></li>
+                        <li class="search-region " data-region-code="mogilev"><span>Могилев</span></li>
+                        <li class="search-region " data-region-code="minsk"><span>Минск</span></li>
+                        <li class="search-region " data-region-code="polotsk"><span>Полоцк и Новополоцк</span></li>
+                    </ul>
+                </div>
+                <link class="meta-link" itemprop="target" href="https://daroo.by/minsk/search?word={word}"
+                      content="https://daroo.by/minsk/search?word={word}" />
+                <input value="" placeholder="Что ищем?" type="text" name="word" class="popupSearchInput"
+                       itemprop="query-input"></div>
+            <div class="popupSearchButtonHolder">
+                <button type="submit" class="popupSearchButton">Искать</button>
+            </div>
+        </form>
+    </div>
+    <!-- END SEARCH POPUP -->
+    <!-- FILTER POPUP -->
+    <style>
+      .bogus {
+        visibility: hidden;
+      }
+    </style>
+    <!-- FILTER POPUP -->
+    <div class="popupFilter">
+        <div class="popupNav"><a href="#" class="back">Назад</a></div>
+        <div class="filterBox open">
+            <form action="#" class="filter-form" onsubmit="return false;" method="post">
+                <div class="filterItem">
+                    <div class="filterSelect filterSelectTwoCols">
+                        <div class="select-holder">
+                            <div class="dropdown-block">
+                                <div class="input-holder">
+                                    <input class="input-with-drop text" readonly onfocus="this.blur()"
+                                           drop_id="drop-first" placeholder="Категория" value="">
+                                    <div class="count">(0)</div>
+                                    <div class="drop-limit">
+                                        <!-- -->
+                                    </div>
+                                </div>
+                                <div class="drop" id="drop-first">
+                                    <div class="drop-holder">
+                                        <ul>
+                                            <li class=""><a href="#">Маникюр</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="473"></li>
+                                            <li class=""><a href="#">Массаж камнями</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="474"></li>
+                                            <li class=""><a href="#">Шоколадное обертывание</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="475"></li>
+                                            <li class=""><a href="#">Педикюр</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="476"></li>
+                                            <li class=""><a href="#">Водорослевое
+                                                обертывание</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="477"></li>
+                                            <li class=""><a href="#">Массаж по зонам</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000288"></li>
+                                            <li class=""><a href="#">Классический массаж всего тела</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000287"></li>
+                                            <li class=""><a href="#">Термолифтинг лица</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000291"></li>
+                                            <li class=""><a href="#">Буккальный массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000286"></li>
+                                            <li class=""><a href="#">Парафинотерапия для
+                                                лица</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000290"></li>
+                                            <li class=""><a href="#">Лифтинг лица</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000289"></li>
+                                            <li class=""><a href="#">Классический массаж
+                                                живота</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000283"></li>
+                                            <li class=""><a href="#">Классический массаж ног</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000281"></li>
+                                            <li class=""><a href="#">Классический массаж рук</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000282"></li>
+                                            <li class=""><a href="#">Баночный массаж от
+                                                целлюлита</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000292"></li>
+                                            <li class=""><a href="#">Ручной массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000284"></li>
+                                            <li class=""><a href="#">Массаж Гуаша</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000285"></li>
+                                            <li class=""><a href="#">Аппаратный антицеллюлитный массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000296"></li>
+                                            <li class=""><a href="#">Аппаратный вакуумно-баночный массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000300"></li>
+                                            <li class=""><a href="#">Массаж B-flexy</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000301"></li>
+                                            <li class=""><a href="#">Вакуумно-роликовый
+                                                массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000302"></li>
+                                            <li class=""><a href="#">SPA-маникюр</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000303"></li>
+                                            <li class=""><a href="#">Лифтинг</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000299"></li>
+                                            <li class=""><a href="#">Аппаратный вакуумно-роликовый массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000298"></li>
+                                            <li class=""><a href="#">Антицеллюлитный корректирующий массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000294"></li>
+                                            <li class=""><a href="#">Ручной антицеллюлитный массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000295"></li>
+                                            <li class=""><a href="#">Классический массаж
+                                                поясницы</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000280"></li>
+                                            <li class=""><a href="#">Аппаратный вакуумный
+                                                массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000297"></li>
+                                            <li class=""><a href="#">Антицеллюлитный
+                                                слим-массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000293"></li>
+                                            <li class=""><a href="#">Ручной лимфодренажный
+                                                массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000274"></li>
+                                            <li class=""><a href="#">Баночный массаж лица</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000261"></li>
+                                            <li class=""><a href="#">Массаж Тоффа</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000260"></li>
+                                            <li class=""><a href="#">Классический массаж
+                                                лица</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000262"></li>
+                                            <li class=""><a href="#">Массаж Шиацу</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000263"></li>
+                                            <li class=""><a href="#">Массаж Асахи (Зоган)</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000264"></li>
+                                            <li class=""><a href="#">Испанский массаж лица</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000259"></li>
+                                            <li class=""><a href="#">Японский массаж лица</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000258"></li>
+                                            <li class=""><a href="#">Эпиляция</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000254"></li>
+                                            <li class=""><a href="#">Коррекция фигуры</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000255"></li>
+                                            <li class=""><a href="#">Лимфодренаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000256"></li>
+                                            <li class=""><a href="#">Точечный массаж лица</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000257"></li>
+                                            <li class=""><a href="#">Аппаратная коррекция
+                                                фигуры</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000265"></li>
+                                            <li class=""><a href="#">Массаж для похудения</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000266"></li>
+                                            <li class=""><a href="#">Ручной моделирующий
+                                                массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000273"></li>
+                                            <li class=""><a href="#">Аппаратный маникюр</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000304"></li>
+                                            <li class=""><a href="#">Аппаратный лимфодренажный массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000275"></li>
+                                            <li class=""><a href="#">Классический массаж
+                                                спины</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000278"></li>
+                                            <li class=""><a href="#">Ручной корректирующий
+                                                массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000272"></li>
+                                            <li class=""><a href="#">Лимфодренажный массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000271"></li>
+                                            <li class=""><a href="#">Баночный массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000267"></li>
+                                            <li class=""><a href="#">Слим-массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000268"></li>
+                                            <li class=""><a href="#">Корректирующий массаж
+                                                тела</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000269"></li>
+                                            <li class=""><a href="#">Моделирующий массаж
+                                                тела</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000270"></li>
+                                            <li class=""><a href="#">Классический массаж шеи</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000279"></li>
+                                            <li class=""><a href="#">Маникюр с покрытием</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000308"></li>
+                                            <li class=""><a href="#">Косметическое отбеливание зубов</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000338"></li>
+                                            <li class=""><a href="#">Косметология для волос</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000337"></li>
+                                            <li class=""><a href="#">Аппаратная косметология</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000339"></li>
+                                            <li class=""><a href="#">SPA-уход для волос</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000340"></li>
+                                            <li class=""><a href="#">Окрашивание волос</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000341"></li>
+                                            <li class=""><a href="#">Рефлексотерапия стоп</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000336"></li>
+                                            <li class=""><a href="#">Массаж стоп</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000335"></li>
+                                            <li class=""><a href="#">Массаж шеи</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000331"></li>
+                                            <li class=""><a href="#">Массаж поясницы</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000332"></li>
+                                            <li class=""><a href="#">Массаж рук</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000333"></li>
+                                            <li class=""><a href="#">Массаж живота</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000334"></li>
+                                            <li class=""><a href="#">Выпрямление волос</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000342"></li>
+                                            <li class=""><a href="#">Бразильское выпрямление волос</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000343"></li>
+                                            <li class=""><a href="#">Еда на заказ</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="502"></li>
+                                            <li class=""><a href="#">Бесконтактные подарки</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000350"></li>
+                                            <li class=""><a href="#">Дегустации</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="517"></li>
+                                            <li class=""><a href="#">Эксклюзив</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="7"></li>
+                                            <li class=""><a href="#">Пейнтбол</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="8"></li>
+                                            <li class=""><a href="#">Внедорожные мотоциклы</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000349"></li>
+                                            <li class=""><a href="#">Церемонии</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000348"></li>
+                                            <li class=""><a href="#">Микроблейдинг бровей</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000344"></li>
+                                            <li class=""><a href="#">Лазерная эпиляция</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000345"></li>
+                                            <li class=""><a href="#">Шугаринг</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000346"></li>
+                                            <li class=""><a href="#">Восковая эпиляция</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000347"></li>
+                                            <li class=""><a href="#">Художественная
+                                                татуировка</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000330"></li>
+                                            <li class=""><a href="#">Ламинирование ресниц и бровей</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000329"></li>
+                                            <li class=""><a href="#">Аппаратный педикюр</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000313"></li>
+                                            <li class=""><a href="#">SPA-педикюр</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000312"></li>
+                                            <li class=""><a href="#">Обрезной педикюр</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000314"></li>
+                                            <li class=""><a href="#">Комбинированный педикюр</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000315"></li>
+                                            <li class=""><a href="#">Мужской педикюр</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000316"></li>
+                                            <li class=""><a href="#">Маникюр с долговременным покрытием
+                                                гель-лаком</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000311"></li>
+                                            <li class=""><a href="#">Маникюр с покрытием
+                                                гелем</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000310"></li>
+                                            <li class=""><a href="#">Комбинированный маникюр</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000306"></li>
+                                            <li class=""><a href="#">Мужской маникюр</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000307"></li>
+                                            <li class=""><a href="#">Массаж с выездом</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000253"></li>
+                                            <li class=""><a href="#">Маникюр с покрытием
+                                                лаком</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000309"></li>
+                                            <li class=""><a href="#">Педикюр с покрытием</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000317"></li>
+                                            <li class=""><a href="#">Педикюр с покрытием
+                                                лаком</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000318"></li>
+                                            <li class=""><a href="#">Косметология лица</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000325"></li>
+                                            <li class=""><a href="#">Химическая чистка лица</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000326"></li>
+                                            <li class=""><a href="#">Комбинированная чистка
+                                                лица</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000327"></li>
+                                            <li class=""><a href="#">Уход за бровями и
+                                                ресницами</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000328"></li>
+                                            <li class=""><a href="#">Процедуры для лица</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000324"></li>
+                                            <li class=""><a href="#">Альгинатная маска</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000323"></li>
+                                            <li class=""><a href="#">Педикюр с долговременным покрытием
+                                                гель-лаком</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000319"></li>
+                                            <li class=""><a href="#">Педикюр с покрытием
+                                                гелем</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000320"></li>
+                                            <li class=""><a href="#">Косметология</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000321"></li>
+                                            <li class=""><a href="#">Маски для лица</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000322"></li>
+                                            <li class=""><a href="#">Обрезной маникюр</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000305"></li>
+                                            <li class=""><a href="#">Катания на пони</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000243"></li>
+                                            <li class=""><a href="#">Фотосессия Love Story</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000172"></li>
+                                            <li class=""><a href="#">Детская фотосессия</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000171"></li>
+                                            <li class=""><a href="#">Семейная фотосессия</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000173"></li>
+                                            <li class=""><a href="#">Фотосессия для
+                                                беременных</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000174"></li>
+                                            <li class=""><a href="#">Свадебная фотосессия</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000175"></li>
+                                            <li class=""><a href="#">Страйкбол</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000170"></li>
+                                            <li class=""><a href="#">Лазертаг</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000169"></li>
+                                            <li class=""><a href="#">Эскейп-румы</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000154"></li>
+                                            <li class=""><a href="#">Живые квесты</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000155"></li>
+                                            <li class=""><a href="#">Квесты-перформансы</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000156"></li>
+                                            <li class=""><a href="#">Квесты в виртуальной реальности</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000157"></li>
+                                            <li class=""><a href="#">Фотосессия
+                                                новорожденных</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000176"></li>
+                                            <li class=""><a href="#">Фотосессия в студии</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000177"></li>
+                                            <li class=""><a href="#">Процедуры и комплексы для волос</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000185"></li>
+                                            <li class=""><a href="#">Барбершопы</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000184"></li>
+                                            <li class=""><a href="#">Комплексы для рук и ног</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000186"></li>
+                                            <li class=""><a href="#">Массаж головы</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000187"></li>
+                                            <li class=""><a href="#">Расслабляющий массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000188"></li>
+                                            <li class=""><a href="#">Укладка</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000183"></li>
+                                            <li class=""><a href="#">Стрижка</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000182"></li>
+                                            <li class=""><a href="#">Фотосессия с животными</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000178"></li>
+                                            <li class=""><a href="#">Мойка машины</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000179"></li>
+                                            <li class=""><a href="#">Чистка салона</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000180"></li>
+                                            <li class=""><a href="#">Кедровая бочка</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000181"></li>
+                                            <li class=""><a href="#">Экшен-квесты</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000153"></li>
+                                            <li class=""><a href="#">Приключенческие квесты</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000152"></li>
+                                            <li class=""><a href="#">Полеты</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="21"></li>
+                                            <li class=""><a href="#">Экстрим</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="22"></li>
+                                            <li class=""><a href="#">Водные развлечения</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="23"></li>
+                                            <li class=""><a href="#">Катания и прогулки</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="24"></li>
+                                            <li class=""><a href="#">Тату</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="16"></li>
+                                            <li class=""><a href="#">Массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="15"></li>
+                                            <li class=""><a href="#">SPA-процедуры и
+                                                комплексы</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="11"></li>
+                                            <li class=""><a href="#">Бани и сауны</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="12"></li>
+                                            <li class=""><a href="#">Уход за руками и ногами</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="13"></li>
+                                            <li class=""><a href="#">Уход за волосами</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="14"></li>
+                                            <li class=""><a href="#">Экскурсии</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="25"></li>
+                                            <li class=""><a href="#">Активные игры</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="26"></li>
+                                            <li class=""><a href="#">Уход за лицом</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="478"></li>
+                                            <li class=""><a href="#">Катания на лошадях</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="481"></li>
+                                            <li class=""><a href="#">Кафе и рестораны</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="488"></li>
+                                            <li class=""><a href="#">Хоррор-квесты</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000151"></li>
+                                            <li class=""><a href="#">Катания на квадроциклах</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="468"></li>
+                                            <li class=""><a href="#">Романтика</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="4"></li>
+                                            <li class=""><a href="#">Развлечения и
+                                                шоу-программы</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="3"></li>
+                                            <li class=""><a href="#">Картинг</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="300"></li>
+                                            <li class=""><a href="#">Лучные бои</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="31"></li>
+                                            <li class=""><a href="#">Обучение музыке</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="32"></li>
+                                            <li class=""><a href="#">Тайский массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000189"></li>
+                                            <li class=""><a href="#">Антицеллюлитный массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000190"></li>
+                                            <li class=""><a href="#">Животные</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000223"></li>
+                                            <li class=""><a href="#">SPA для двоих</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000222"></li>
+                                            <li class=""><a href="#">Обучение языкам</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000227"></li>
+                                            <li class=""><a href="#">Обучение вождению</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000228"></li>
+                                            <li class=""><a href="#">Обучение барабанам</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000229"></li>
+                                            <li class=""><a href="#">Сегвеи</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000221"></li>
+                                            <li class=""><a href="#">Катания на танках</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000220"></li>
+                                            <li class=""><a href="#">Батуты</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000216"></li>
+                                            <li class=""><a href="#">Джип-туры</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000217"></li>
+                                            <li class=""><a href="#">Катания на хаски</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000218"></li>
+                                            <li class=""><a href="#">Катания на багги</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000219"></li>
+                                            <li class=""><a href="#">Обучение фортепиано</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000230"></li>
+                                            <li class=""><a href="#">Обучение гитаре</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000231"></li>
+                                            <li class=""><a href="#">Парафинотерапия</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000241"></li>
+                                            <li class=""><a href="#">Фотопечать</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000242"></li>
+                                            <li class=""><a href="#">Тюнинг авто</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000245"></li>
+                                            <li class=""><a href="#">Поездки по Беларуси</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000247"></li>
+                                            <li class=""><a href="#">Виртуальная реальность</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000240"></li>
+                                            <li class=""><a href="#">Видеосъемка</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000239"></li>
+                                            <li class=""><a href="#">Обучение вокалу</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000232"></li>
+                                            <li class=""><a href="#">Обучение танцам</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000233"></li>
+                                            <li class=""><a href="#">Кулинарные курсы</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000234"></li>
+                                            <li class=""><a href="#">Спортивное обучение</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000235"></li>
+                                            <li class=""><a href="#">Скалодром</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000215"></li>
+                                            <li class=""><a href="#">Теннис</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000214"></li>
+                                            <li class=""><a href="#">Чистка лица</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000198"></li>
+                                            <li class=""><a href="#">SPA для лица</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000197"></li>
+                                            <li class=""><a href="#">Массаж лица</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000199"></li>
+                                            <li class=""><a href="#">Коррекция бровей</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000200"></li>
+                                            <li class=""><a href="#">Наращивание ресниц</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000201"></li>
+                                            <li class=""><a href="#">Медовый массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000196"></li>
+                                            <li class=""><a href="#">Омолаживающий массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000195"></li>
+                                            <li class=""><a href="#">Массаж ног</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000191"></li>
+                                            <li class=""><a href="#">Классический массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000192"></li>
+                                            <li class=""><a href="#">Спортивный массаж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000193"></li>
+                                            <li class=""><a href="#">Массаж спины</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000194"></li>
+                                            <li class=""><a href="#">Перманентный макияж</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000202"></li>
+                                            <li class=""><a href="#">ЭМС-тренировка</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000203"></li>
+                                            <li class=""><a href="#">Обучение ИЗО</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000210"></li>
+                                            <li class=""><a href="#">Прыжки с парашютом</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000211"></li>
+                                            <li class=""><a href="#">Веревочный парк</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000212"></li>
+                                            <li class=""><a href="#">Боулинг</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000213"></li>
+                                            <li class=""><a href="#">Карьера</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000209"></li>
+                                            <li class=""><a href="#">Занятия йогой</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000208"></li>
+                                            <li class=""><a href="#">Аквааэробика</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000204"></li>
+                                            <li class=""><a href="#">Фитнес на батутах</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000205"></li>
+                                            <li class=""><a href="#">Танцевальный фитнес</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000206"></li>
+                                            <li class=""><a href="#">Занятия в тренажерном
+                                                зале</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000207"></li>
+                                            <li class=""><a href="#">Туры за границу</a>
+                                                <input type="checkbox" data-type="multiple" class="bogus"
+                                                       name="category[]" value="5000248"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filterItem">
+                    <div class="filterSelect">
+                        <div class="select-holder">
+                            <div class="dropdown-block dropdown-radio dropdown-radio-only-full">
+                                <div class="input-holder">
+                                    <input class="input-with-drop text" readonly onfocus="this.blur()"
+                                           drop_id="drop-second" placeholder="Кому" value="">
+                                    <div class="count">(0)</div>
+                                    <div class="drop-limit">
+                                        <!-- -->
+                                    </div>
+                                </div>
+                                <div class="drop" id="drop-second">
+                                    <div class="drop-holder recipient-select"
+                                         data-ajax-url="/minsk/category/load-occasions">
+                                        <div class="container">
+                                            <div class="left"></div>
+                                            <div class="right"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filterItem">
+                    <div class="filterPriceInputs">
+                        <div class="filterPriceInputsHolder">
+                            <input name="minPrice" class="priceInput" type="number" value="" placeholder="От 6"></div>
+                        <div class="filterPriceInputsHolder">
+                            <input name="maxPrice" class="priceInput" type="number" value="" placeholder="До 4400">
+                        </div>
+                    </div>
+                </div>
+                <div class="filterItem">
+                    <div class="filterBtns"><a class="btn filter-submit-link" href="#">Подобрать</a><a
+                            class="btn btnReset filter-form-reset" href="#">Очистить фильтр</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+      $('.filter-form-reset').on('click', function (e) {
+        e.preventDefault()
+        var form = $(this).parents('form')
+        console.log(form.find('.drop-holder').find('li.active').length, form.find('.drop-holder').find('li.active'))
+        form.find('.drop-holder').find('li.active').removeClass('active')
+        form.find('.input-with-drop').val('')
+        form.find('.count').text('')
+        form.find('.drop-holder').find('input[type="checkbox"]').removeAttr('checked')
+      })
+      $('.filter-submit-link').on('click', function (e) {
+        e.preventDefault()
+        $(this).parents('form').trigger('submit')
+        return false
+      })
+      $('.filter-form').on('submit', function (e) {
+        e.preventDefault()
+        var flds = $(this).serialize()
+        var url = '/minsk/product/locate-filter-url'
+        Url.post(url, flds, function (reply) {
+          //console.log(reply.reply);return;
+          if (!reply || reply.status == 'error') {
+            alert('Ошибка при обработке запроса')
+            return false
+          }
+          window.location = reply.reply
+          return false
+        })
+      })
+    </script>
+    <!-- END FILTER POPUP -->
+    <script>
+      $(document).ready(function () {
+        $('.user').on('click', 'a#authUserLink', function (e) {
+          if ($('.user').hasClass('need-auth')) {
+            window.location.href = $(this).attr('href')
+          }
+          $('.popupUser').stop().velocity({
+            right: 0
+          }, 150, 'linear')
+          $('body').css('overflow-y', 'hidden')
+          $('body').css('position', 'fixed')
+          return false
+        })
+      })
+    </script>
+    <div class="popupMenu">
+        <div class="popupNav"><a href="#" class="back"> Назад </a><a href="https://daroo.by/user/auth" class="logout">
+            Войти </a></div>
+        <div class="menuCont">
+            <div class="menuCatalog open">
+                <div class="region-dropdown-cont" data-current-region="minsk" data-domain="https://daroo.by"
+                     data-region-url="https://daroo.by/minsk/region/removeRegionPopup">
+                    <div class="dropdown-op">
+                        <div class="choose-op" data-region-code="minsk"><span>Минск</span></div>
+                        <ul>
+                            <li class="popup-choose-region" data-region-code="brest"><span> Брест </span></li>
+                            <li class="popup-choose-region" data-region-code="vitebsk"><span> Витебск </span></li>
+                            <li class="popup-choose-region" data-region-code="gomel"><span> Гомель </span></li>
+                            <li class="popup-choose-region" data-region-code="grodno"><span> Гродно </span></li>
+                            <li class="popup-choose-region" data-region-code="mogilev"><span> Могилев </span></li>
+                            <li class="popup-choose-region active" data-region-code="minsk"><span class="span active"> Минск </span>
+                            </li>
+                            <li class="popup-choose-region" data-region-code="polotsk">
+                                <span> Полоцк и Новополоцк </span></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="menuCatalogMain">
+                    <li class="menuCatalogItem ifMenu"><span class="menuCatalogItemLink"><button
+                            class="menuCatalogItemLink__button">Развернуть</button><a
+                            href="https://daroo.by/minsk/kvesty">Квесты</a></span>
+                        <ul>
+                            <li><a style="padding-left: 94px;"
+                                   href="https://daroo.by/minsk/horror-kvesty">Хоррор-квесты</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/priklyuchencheskie-kvesty">Приключенческие
+                                квесты</a></li>
+                            <li><a style="padding-left: 94px;"
+                                   href="https://daroo.by/minsk/ehkshn-kvesty">Экшен-квесты</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/zhivye-kvesty">Живые
+                                квесты</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/kvesty-performansy">Квесты-перформансы</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menuCatalogItem"><a style="padding-left: 95px;" class="menuCatalogItemLink"
+                                                   href="https://daroo.by/minsk/sale">Акции и скидки</a></li>
+                    <li class="menuCatalogItem ifMenu"><span class="menuCatalogItemLink"><button
+                            class="menuCatalogItemLink__button">Развернуть</button><a
+                            href="https://daroo.by/minsk/krasota-i-zdorovje">Услуги салонов красоты</a></span>
+                        <ul>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/spa-kompleksy">SPA-процедуры
+                                и комплексы</a>
+                                <ul style="padding-left: 94px;">
+                                    <li><a href="https://daroo.by/minsk/shokoladnoe-obertyvanie">Шоколадное
+                                        обертывание</a></li>
+                                    <li><a href="https://daroo.by/minsk/vodoroslevoe-obertyvanie">Водорослевое
+                                        обертывание</a></li>
+                                    <li><a href="https://daroo.by/minsk/kedrovaya-bochka">Кедровая бочка</a></li>
+                                    <li><a href="https://daroo.by/minsk/spa-dlya-dvoih">SPA для двоих</a></li>
+                                </ul>
+                            </li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/bani-i-sauny">Бани
+                                и сауны</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/manikjur-i-pedikjur">Уход за
+                                руками и
+                                ногами</a>
+                                <ul style="padding-left: 94px;">
+                                    <li><a href="https://daroo.by/minsk/manikyur">Маникюр</a></li>
+                                    <li><a href="https://daroo.by/minsk/pedikyur">Педикюр</a></li>
+                                    <li><a href="https://daroo.by/minsk/kompleksy-dlya-ruk-i-nog">Комплексы для
+                                        рук и ног</a></li>
+                                    <li><a href="https://daroo.by/minsk/parafinoterapiya">Парафинотерапия</a></li>
+                                </ul>
+                            </li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/uhod-za-volosami">Уход
+                                за волосами</a>
+                                <ul style="padding-left: 94px;">
+                                    <li><a href="https://daroo.by/minsk/strizhka">Стрижка</a></li>
+                                    <li><a href="https://daroo.by/minsk/ukladka">Укладка</a></li>
+                                    <li><a href="https://daroo.by/minsk/strizhka-v-barbershope">Барбершопы</a></li>
+                                    <li><a href="https://daroo.by/minsk/kompleksy-po-uhodu-za-volosami">Процедуры
+                                        и комплексы для волос</a></li>
+                                    <li><a href="https://daroo.by/minsk/spa-uhod-dla-volos">SPA-уход для
+                                        волос</a></li>
+                                    <li><a href="https://daroo.by/minsk/vypryamlenie-volos">Выпрямление
+                                        волос</a></li>
+                                </ul>
+                            </li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/massazh">Массаж</a>
+                                <ul style="padding-left: 94px;">
+                                    <li><a href="https://daroo.by/minsk/massazh-kamnyami">Массаж камнями</a></li>
+                                    <li><a href="https://daroo.by/minsk/massazh-golovy">Массаж головы</a></li>
+                                    <li><a href="https://daroo.by/minsk/rasslablyayushchij-massazh">Расслабляющий
+                                        массаж</a></li>
+                                    <li><a href="https://daroo.by/minsk/tajskij-massazh">Тайский массаж</a></li>
+                                    <li><a href="https://daroo.by/minsk/anticellyulitnyj-massazh">Антицеллюлитный
+                                        массаж</a></li>
+                                    <li><a href="https://daroo.by/minsk/klassicheskij-massazh">Классический
+                                        массаж</a></li>
+                                    <li><a href="https://daroo.by/minsk/sportivnyj-massazh">Спортивный
+                                        массаж</a></li>
+                                    <li><a href="https://daroo.by/minsk/medovyj-massazh">Медовый массаж</a></li>
+                                    <li><a href="https://daroo.by/minsk/massazh-pohudenie">Массаж для
+                                        похудения</a></li>
+                                    <li><a href="https://daroo.by/minsk/massazh-po-zonam">Массаж по зонам</a></li>
+                                </ul>
+                            </li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/tatu">Тату</a>
+                                <ul style="padding-left: 94px;">
+                                    <li><a href="https://daroo.by/minsk/permanentnyj-makiyazh">Перманентный
+                                        макияж</a></li>
+                                    <li><a href="https://daroo.by/minsk/hudojestvennaya-tatuirovka">Художественная
+                                        татуировка</a></li>
+                                </ul>
+                            </li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/uhod-za-licom">Уход
+                                за лицом</a>
+                                <ul style="padding-left: 94px;">
+                                    <li><a href="https://daroo.by/minsk/spa-dlya-lica">SPA для лица</a></li>
+                                    <li><a href="https://daroo.by/minsk/chistka-lica">Чистка лица</a></li>
+                                    <li><a href="https://daroo.by/minsk/massazh-lica">Массаж лица</a></li>
+                                    <li><a href="https://daroo.by/minsk/lifting-lica">Лифтинг лица</a></li>
+                                    <li><a href="https://daroo.by/minsk/maski-dlya-lica">Маски для лица</a></li>
+                                    <li><a href="https://daroo.by/minsk/procedury-dlya-lica">Процедуры для
+                                        лица</a></li>
+                                </ul>
+                            </li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/ehpilyaciya">Эпиляция</a>
+                                <ul style="padding-left: 94px;">
+                                    <li><a href="https://daroo.by/minsk/lazernaya-ehpilyaciya">Лазерная
+                                        эпиляция</a></li>
+                                    <li><a href="https://daroo.by/minsk/shugaring">Шугаринг</a></li>
+                                    <li><a href="https://daroo.by/minsk/voskovaya-ehpilyaciya">Восковая
+                                        эпиляция</a></li>
+                                </ul>
+                            </li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/korrekciya-figury">Коррекция
+                                фигуры</a>
+                                <ul style="padding-left: 94px;">
+                                    <li><a href="https://daroo.by/minsk/limfodrenazh">Лимфодренаж</a></li>
+                                    <li><a href="https://daroo.by/minsk/apparatnaya-korrekciya-figury">Аппаратная
+                                        коррекция фигуры</a></li>
+                                </ul>
+                            </li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/lifting">Лифтинг</a></li>
+                            <li><a style="padding-left: 94px;"
+                                   href="https://daroo.by/minsk/kosmetologiya">Косметология</a>
+                                <ul style="padding-left: 94px;">
+                                    <li><a href="https://daroo.by/minsk/kosmetologiya-lica">Косметология
+                                        лица</a></li>
+                                    <li><a href="https://daroo.by/minsk/kosmetologiya-dlya-volos">Косметология
+                                        для волос</a></li>
+                                    <li><a href="https://daroo.by/minsk/kosmeticheskoye-otbelivanie-zubov">Косметическое
+                                        отбеливание зубов</a></li>
+                                    <li><a href="https://daroo.by/minsk/apparatnaya-kosmetologya">Аппаратная
+                                        косметология</a></li>
+                                </ul>
+                            </li>
+                            <li><a style="padding-left: 94px;"
+                                   href="https://daroo.by/minsk/uhod-za-brovyami-i-resnicami">Уход за бровями и
+                                ресницами</a>
+                                <ul style="padding-left: 94px;">
+                                    <li><a href="https://daroo.by/minsk/korrekciya-brovej">Коррекция бровей</a></li>
+                                    <li><a href="https://daroo.by/minsk/narashchivanie-resnic">Наращивание
+                                        ресниц</a></li>
+                                    <li><a href="https://daroo.by/minsk/laminirovanije-resnic-i-brovej">Ламинирование
+                                        ресниц и бровей</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menuCatalogItem ifMenu"><span class="menuCatalogItemLink"><button
+                            class="menuCatalogItemLink__button">Развернуть</button><a
+                            href="https://daroo.by/minsk/aktivnyj-otdyh">Активный отдых</a></span>
+                        <ul>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/polety">Полеты</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/ekstrim">Экстрим</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/vodnye-razvlecheniya">Водные
+                                развлечения</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/katanija-i-progulki">Катания
+                                и прогулки</a>
+                                <ul style="padding-left: 94px;">
+                                    <li><a href="https://daroo.by/minsk/karting">Картинг</a></li>
+                                    <li><a href="https://daroo.by/minsk/kataniya-na-kvadrociklah">Катания на
+                                        квадроциклах</a></li>
+                                    <li><a href="https://daroo.by/minsk/kataniya-na-loshadyah">Катания на
+                                        лошадях</a></li>
+                                    <li><a href="https://daroo.by/minsk/dzhip-tury">Джип-туры</a></li>
+                                    <li><a href="https://daroo.by/minsk/kataniya-na-tankah">Катания на
+                                        танках</a></li>
+                                    <li><a href="https://daroo.by/minsk/kataniya-na-poni">Катания на пони</a></li>
+                                    <li><a href="https://daroo.by/minsk/vnedorozhnye-motocikly">Внедорожные
+                                        мотоциклы</a></li>
+                                </ul>
+                            </li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/jekskursii">Экскурсии</a>
+                            </li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/sportivnye-igry">Активные
+                                игры</a>
+                                <ul style="padding-left: 94px;">
+                                    <li><a href="https://daroo.by/minsk/pejntbol">Пейнтбол</a></li>
+                                    <li><a href="https://daroo.by/minsk/luchnye-boi">Лучные бои</a></li>
+                                    <li><a href="https://daroo.by/minsk/lazertag">Лазертаг</a></li>
+                                    <li><a href="https://daroo.by/minsk/strajkbol">Страйкбол</a></li>
+                                    <li><a href="https://daroo.by/minsk/verevochnyj-park">Веревочный парк</a></li>
+                                    <li><a href="https://daroo.by/minsk/bouling">Боулинг</a></li>
+                                    <li><a href="https://daroo.by/minsk/tennis">Теннис</a></li>
+                                    <li><a href="https://daroo.by/minsk/skalodrom">Скалодром</a></li>
+                                    <li><a href="https://daroo.by/minsk/batuty">Батуты</a></li>
+                                </ul>
+                            </li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/virtualnaya-realnost">Виртуальная
+                                реальность</a></li>
+                        </ul>
+                    </li>
+                    <li class="menuCatalogItem"><a style="padding-left: 95px;" class="menuCatalogItemLink"
+                                                   href="https://daroo.by/minsk/razvlechenija">Развлечения и
+                        шоу-программы</a></li>
+                    <li class="menuCatalogItem"><a style="padding-left: 95px;" class="menuCatalogItemLink"
+                                                   href="https://daroo.by/minsk/romantika">Романтика</a></li>
+                    <li class="menuCatalogItem ifMenu"><span class="menuCatalogItemLink"><button
+                            class="menuCatalogItemLink__button">Развернуть</button><a
+                            href="https://daroo.by/minsk/obuchenie-i-master-klassy">Обучение и мастер-классы</a></span>
+                        <ul>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/obuchenie-muzyke">Обучение
+                                музыке</a>
+                                <ul style="padding-left: 94px;">
+                                    <li><a href="https://daroo.by/minsk/obuchenie-barabanam">Обучение
+                                        барабанам</a></li>
+                                    <li><a href="https://daroo.by/minsk/obuchenie-fortepiano">Обучение
+                                        фортепиано</a></li>
+                                    <li><a href="https://daroo.by/minsk/obuchenie-gitare">Обучение гитаре</a></li>
+                                    <li><a href="https://daroo.by/minsk/obuchenie-vokalu">Обучение вокалу</a></li>
+                                </ul>
+                            </li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/karera">Карьера</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/obuchenie-izo">Обучение
+                                ИЗО</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/obuchenie-yazykam">Обучение
+                                языкам</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/obuchenie-vozhdeniyu">Обучение
+                                вождению</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/obuchenie-tancam">Обучение
+                                танцам</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/kulinarnye-kursy">Кулинарные
+                                курсы</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/sportivnoe-obuchenie">Спортивное
+                                обучение</a></li>
+                        </ul>
+                    </li>
+                    <li class="menuCatalogItem ifMenu"><span class="menuCatalogItemLink"><button
+                            class="menuCatalogItemLink__button">Развернуть</button><a
+                            href="https://daroo.by/minsk/fotosessii">Фотосессии</a></span>
+                        <ul>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/detskaya-fotosessiya">Детская
+                                фотосессия</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/love-story-fotosessiya">Фотосессия
+                                Love
+                                Story</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/semejnaya-fotosessiya">Семейная
+                                фотосессия</a></li>
+                            <li><a style="padding-left: 94px;"
+                                   href="https://daroo.by/minsk/fotosessiya-dlya-beremennyh">Фотосессия для
+                                беременных</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/svadebnaya-fotosessiya">Свадебная
+                                фотосессия</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/fotosessiya-novorozhdennyh">Фотосессия
+                                новорожденных</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/fotosessiya-v-studii">Фотосессия
+                                в студии</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/fotosessiya-s-zhivotnymi">Фотосессия
+                                с
+                                животными</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/videosemka">Видеосъемка</a>
+                            </li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/fotopechat">Фотопечать</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menuCatalogItem"><a style="padding-left: 95px;" class="menuCatalogItemLink"
+                                                   href="https://daroo.by/minsk/ekskljuziv">Эксклюзив</a></li>
+                    <li class="menuCatalogItem ifMenu"><span class="menuCatalogItemLink"><button
+                            class="menuCatalogItemLink__button">Развернуть</button><a
+                            href="https://daroo.by/minsk/fitnes">Фитнес и спорт</a></span>
+                        <ul>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/ems-trenirovka">ЭМС-тренировка</a>
+                            </li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/tancevalnyj-fitnes">Танцевальный
+                                фитнес</a></li>
+                            <li><a style="padding-left: 94px;"
+                                   href="https://daroo.by/minsk/zanyatiya-v-trenazhernom-zale">Занятия в
+                                тренажерном зале</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/zanyatiya-jogoj">Занятия
+                                йогой</a></li>
+                        </ul>
+                    </li>
+                    <li class="menuCatalogItem ifMenu"><span class="menuCatalogItemLink"><button
+                            class="menuCatalogItemLink__button">Развернуть</button><a
+                            href="https://daroo.by/minsk/gurmanam">Гурманам</a></span>
+                        <ul>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/kafe-i-restorany">Кафе
+                                и рестораны</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/degustacii">Дегустации</a>
+                            </li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/ceremonii">Церемонии</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menuCatalogItem"><a style="padding-left: 95px;" class="menuCatalogItemLink"
+                                                   href="https://daroo.by/minsk/podarochnye-nabory">Подарочные
+                        наборы</a></li>
+                    <li class="menuCatalogItem ifMenu"><span class="menuCatalogItemLink"><button
+                            class="menuCatalogItemLink__button">Развернуть</button><a
+                            href="https://daroo.by/minsk/avtomobili">Автолюбителям</a></span>
+                        <ul>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/mojka-mashiny">Мойка
+                                машины</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/chistka-salona">Чистка
+                                салона</a></li>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/tyuning-avto">Тюнинг
+                                авто</a></li>
+                        </ul>
+                    </li>
+                    <li class="menuCatalogItem"><a style="padding-left: 95px;" class="menuCatalogItemLink"
+                                                   href="https://daroo.by/minsk/zhivotnye">Животные</a></li>
+                    <li class="menuCatalogItem ifMenu"><span class="menuCatalogItemLink"><button
+                            class="menuCatalogItemLink__button">Развернуть</button><a
+                            href="https://daroo.by/minsk/puteshestviya">Путешествия</a></span>
+                        <ul>
+                            <li><a style="padding-left: 94px;" href="https://daroo.by/minsk/poezdki-po-belarusi">Поездки
+                                по Беларуси</a></li>
+                        </ul>
+                    </li>
+                    <li class="menuCatalogItem"><a style="padding-left: 95px;" class="menuCatalogItemLink"
+                                                   href="https://daroo.by/minsk/contactless-gifts">Бесконтактные
+                        подарки</a></li>
+                    <li class="menuCatalogItem"><a style="padding-left: 95px;" class="menuCatalogItemLink"
+                                                   href="https://daroo.by/minsk/catalog">Весь каталог</a></li>
+                </ul>
+                <nav class="menuMain">
+                    <ul>
+                        <li><a target="_blank" href="/minsk/sale"> Акции и скидки до 60% </a></li>
+                        <li><a target="_blank" href="/minsk/podarochnye-nabory"> Подарочные наборы </a></li>
+                        <li><a target="_blank" href="/minsk/http://daroo.by/corp"> Корпоративные подарки </a></li>
+                        <li><a target="_blank" href="/minsk/dostavka-i-oplata"> Доставка и оплата </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="popupBasket basketContDisplay" style="display: none">
+        <div class="popupNav"><a href="" class="back">Назад</a><a class="basketLink" href=""><span
+                class="total-items-count">0</span></a></div>
+        <div class="popupBasketCont">
+            <div class="basketOrder">
+                <div class="total"> итого: <strong><span id="totalItems">0&nbsp;шт.,</span>&nbsp;
+                    <span id="cart-inline-total"> 0.00 руб. </span></strong></div>
+                <a class="btn self-cart-btn" href="https://daroo.by/minsk/cart/save/pack-type/self">Оформить
+                    для себя</a><a class="btn gift-cart-btn" href="https://daroo.by/minsk/cart/save/pack-type/gift">Оформить
+                в
+                подарок</a></div>
+        </div>
+    </div>
+    <script>
+      $('a.self-cart-btn, a.gift-cart-btn').on('click', function (e) {
+        e.preventDefault()
+        if ($(this).hasClass('disable-button') || $(this).attr('disabled')) {
+          return false
+        }
+        var url = 'https://daroo.by/minsk/cart/get-cart-product-events'
+        window.location.href = $(this).attr('href')
+        return false
+      })
+      var totalItems = parseInt('0')
+      if (!totalItems) totalItems = 0
+      var totalsUrl = '/minsk/cart/get/totals'
+      $('.popupBasketCont').on('click', '.cart-inline-remove', function (e) {
+        e.preventDefault()
+        var url = $(this).attr('data-href')
+        var id = $(this).prop('id').split('-').pop()
+        return false
+      })
+    </script>
+</div>
+<script>
+  $(document).ready(function () {
+    $('.order-btn').click(function () {
+      __AtmUrls = window.__AtmUrls || []
+      __AtmUrls.push('https://daroo.by/add-to-cart')
+    })
+    $('a.cart-btn').click(function () {
+      var self = $(this)
+      var product_url = self.next().attr('href') || null
+      if (null !== product_url) {
+        __AtmUrls = window.__AtmUrls || []
+        __AtmUrls.push('https://daroo.by/' + product_url)
+        __AtmUrls.push('https://daroo.by/add-to-cart')
+      }
+    })
+    setIframeInvisible()
+  })
+
+  function setIframeInvisible () {
+    var $frame = $('iframe[name=google_conversion_frame]')
+    $frame.css('width', '0px')
+    $frame.css('height', '0px')
+    $frame.css('display', 'none')
+  }
+</script>
+</body>
+
+</html>

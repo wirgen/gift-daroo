@@ -12,6 +12,18 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic&subset=latin,cyrillic"
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,300" rel="stylesheet">
+    <script type="text/javascript">
+      function getCookie (name) {
+        let value = `; ${document.cookie}`;
+        let parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+      }
+
+      var deviceView = getCookie('deviceView')
+      if (deviceView === 'mobile' || (deviceView === undefined && ("ontouchstart" in document.documentElement))) {
+        document.location.href = '/minsk/aviaklub-crazy-fly11380/'
+      }
+    </script>
     <script src="/assets/js/desktop/full.js?v=1.3.3.1" type="text/javascript"></script>
     <script src="/js/ladda/dist/spin.min.js" type="text/javascript"></script>
     <script src="/js/ladda/dist/ladda.min.js" type="text/javascript"></script>
@@ -36,9 +48,6 @@
     <meta content="telephone=no" name="format-detection">
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
-<link class="meta-link" content="https://daroo.by/minsk/polet-na-samolete"
-      href="https://daroo.by/minsk/polet-na-samolete"
-      itemprop="url" />
 <span data-is-mobile="0" data-zone="by" id="zone-span" style="display: none;"></span>
 <div class="preloader-bg">
     <div id="preloader"></div>
@@ -1486,7 +1495,7 @@
             <span class=''>/</span>
             <a href="https://daroo.by/minsk/polety" itemprop="url"> Полеты </a>
             <span class=''>/</span>
-            <span href="https://daroo.by/minsk/polet-na-samolete" itemprop="url"> Обзорные полеты на самолете </span>
+            <span href="/minsk/aviaklub-crazy-fly/" itemprop="url"> Обзорные полеты на самолете </span>
         </div>
         <script>
           $(document).ready(function () {
@@ -1589,7 +1598,7 @@
                                                     организовать не забываемый полет, чтобы осуществить свою мечту.
                                                     Отдохните от повседневной жизни и убедитесь, что мир выглядит
                                                     совершенно иначе, чем прежде. Море адреналина, море впечатлений и
-                                                    потрясающий полет над красотами родного края гарантированы! </p>
+                                                    потрясающий полет над красотами родного края гарантированы!</p>
                                                 <a class="scrollto" href="#">
                                                     <!-- -->
                                                 </a>
@@ -1613,7 +1622,7 @@
                                                         одиночестве. Свободный полет в прохладную воду в жаркий
                                                         день. </p>
                                                     <p class="note">
-                                                        <span> Гарантия качества: В случае неудачного приземления мы вернем Вам всю потраченную сумму! </span>
+                                                        <span>Гарантия качества: В случае неудачного приземления мы вернем Вам всю потраченную сумму!</span>
                                                         <span class='stocks-left'>Осталось: <span class='stock-left'>13 дней 13 часов</span></span>
                                                     </p>
                                                 </div>
@@ -1634,7 +1643,7 @@
                                                        data-price="220.00"
                                                        data-supplier="Авиаклуб Crazy Fly"
                                                        data-usage-condition="Супер экстремал"
-                                                       href="" id="booking-btn"
+                                                       href="#" id="booking-btn"
                                                        style="width: 158px;"> Записаться на услугу </a>
                                                 </div>
                                                 <div class="accordion-content-buy" style="width: 180px;">
@@ -2813,7 +2822,7 @@
                     </div>
                 </div>
                 <div class="foot-big-links">
-                    <a class="change-device-view mobile" data-href="mobile">Мобильная версия</a>
+                    <a href="/minsk/aviaklub-crazy-fly11380/" class="change-device-view mobile" data-href="mobile">Мобильная версия</a>
                     <a class="acivate" href="https://daroo.by/activate" target="_blank"> Активировать сертификат </a>
                 </div>
                 <div class="foot-social">
@@ -2848,16 +2857,8 @@
       })
       $('.change-device-view').on('click', function (e) {
         e.preventDefault()
-        var deviceViewCode = $(this).attr('data-href')
-        var url = '/minsk/changeDeviceView'
-        var data = {
-          device_view: deviceViewCode
-        }
-        Url.post(url, jQuery.param(data), function (response) {
-          if (response.status === 'ok') {
-            window.location.reload()
-          }
-        })
+        document.cookie = `deviceView=${$(this).attr('data-href')}; path=/;`;
+        document.location.href = '/minsk/aviaklub-crazy-fly11380/'
         return false
       })
     </script>
